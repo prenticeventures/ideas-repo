@@ -1,6 +1,34 @@
 # Bounding Box Calibration Plan
 *Created: March 6, 2026*
 
+## Status Update — March 6, 2026
+
+Progress since this plan was drafted:
+
+- ✅ Implemented OSM qualification pipeline in `topo-map-creator`:
+  - `scripts/osm-seed-manifest.ts`
+  - `scripts/audit-osm-coverage.ts`
+  - `pnpm audit:osm-coverage`
+- ✅ Audit artifacts now generated per run:
+  - `output/osm-coverage.json`
+  - `output/osm-coverage-report.md`
+- ✅ Determinism check added (`--determinism-check`)
+
+Latest full-catalog audit snapshot (March 6, 2026):
+- `pass=17, warn=0, fail=8`
+- `osm_sufficient_for_literal_boundaries=false`
+
+Interpretation:
+- OSM resolves most national parks + ski areas with polygon boundaries.
+- `mount-hood` and `half-dome` resolve as point peaks (coordinates present,
+  literal polygon boundaries absent under strict policy).
+- Some failures are transient Overpass reliability/rate-limit errors (`429/504/fetch`),
+  not necessarily missing geometry.
+
+This means the immediate task is now policy lock-in for no-manual-intervention
+boundary discovery (strict OSM-only vs synthetic peak fallback vs hybrid source),
+then proceed to final bounds calibration.
+
 ## The Problem
 
 Current bounding boxes in `scripts/locations.ts` were hand-estimated. Several are
@@ -175,9 +203,10 @@ running the full batch.
 
 ## Sequence When Picking This Up
 
-1. Verify NPS boundary data source (API vs ArcGIS vs GitHub GeoJSON)
-2. Test OSM Overpass query for one NPS park manually to confirm format
-3. Write `calibrate-bounds.ts` — NPS locations first, then OSM
-4. Run it, review output diff vs current `locations.ts`
-5. Re-run test images for Smokies + one other to validate
-6. If good, run full 25-location batch
+1. Run `pnpm audit:osm-coverage` and review `output/osm-coverage-report.md`
+2. Lock production policy for peak/landmark boundaries (strict literal vs synthetic fallback)
+3. Stabilize Overpass reliability handling (retry/mirror strategy) until gate is repeatable
+4. Run `scripts/calibrate-bounds.ts` using the approved source policy
+5. Review output diff vs current `scripts/locations.ts`
+6. Re-run test images for Smokies + one other to validate framing
+7. If good, run full 25-location batch
