@@ -1,5 +1,5 @@
 # Topo Map Business — Session Handoff
-*Last updated: March 4, 2026 | For continuation in a fresh Claude session*
+*Last updated: March 5, 2026 | For continuation in a fresh Claude session*
 
 ---
 
@@ -7,149 +7,190 @@
 
 You have a proprietary rendering engine that generates visually rich, artistic topographic maps for any coordinates worldwide, with any color scheme. You want to turn this into a passive side business selling custom topo map art.
 
-The research is complete. All pricing is verified. The next concrete step is Etsy setup.
+---
+
+## Current Status
+
+**Phase: Calibrating bounding boxes for all 25 locations before full batch run.**
+
+Contour density validated (targetLines = 20 → 75m for Grand Canyon, looks good). Tile retry logic in place. Discovered that hand-estimated bounding boxes are off-center for some locations (Smokies test showed large empty flat areas). Plan is to derive all 25 bounding boxes mathematically from official park/area boundary data before running the full batch.
+
+See `bounding-box-plan.md` for the full step-by-step plan.
 
 ---
 
-## What's Already Done
+## What's Done
 
-### Research report
-`report.md` is a complete 8-section business research report, fully updated through March 4, 2026. It covers:
-1. POD canvas vendors + verified pricing + shipping (Jondo stretched & framed) + coasters & journals (new March 4)
-2. Embroidery on demand (not viable for wall art)
-3. Customer segments & go-to-market sizing
-4. Distribution strategy (Etsy → Shopify → configurator phased rollout)
-5. Competitive landscape (Mapiful, Topographia Design, Etsy sellers)
-6. Operations & infrastructure stack
-7. Financial model / P&L with verified unit economics
-8. Summary & prioritized 8-step action plan
+### Business research (March 4, 2026)
+`report.md` — complete 8-section research report:
+- POD vendor pricing verified (Jondo stretched + framed canvas, coasters, journals)
+- Customer segments, distribution strategy (Etsy → Shopify → configurator)
+- Competitive landscape, financial model / P&L, 8-step action plan
 
-### All Printify pricing verified (from authenticated browser session)
+### Printify pricing verified
+All unit economics confirmed for: stretched canvas (Jondo 1.25"), framed canvas (Jondo Multi-color), hardboard coaster, corkwood set of 4, hardcover journal. See HANDOFF.md § Key Numbers and `report.md` § 1.
 
-**Stretched Canvas — Jondo Matte 1.25" (Feb 2026)**
-- All 60 sizes + prices (standard + Premium)
-- All 6 economy shipping tiers (US, 4–8 business days)
-- Premium discount: exactly 25%
+### 25-location product catalog finalized (`catalog-locations.md`)
+Wave 1 (launch): Grand Canyon, Yosemite, Yellowstone, Zion, Great Smoky Mountains, Grand Teton, Glacier, Rocky Mountain NP, Acadia, Jackson Hole.
+Wave 2: Breckenridge, Aspen, Vail, Lake Tahoe, Park City, Olympic, Mount Rainier, Arches/Canyonlands, Joshua Tree, Crater Lake.
+Wave 3: Bryce Canyon, Hawaii Volcanoes, Mount Hood, Half Dome, Denali.
 
-**Framed Canvas — Jondo Matte Framed Multi-color (March 2, 2026)**
-- All 57 sizes + prices (standard + Premium)
-- 4 economy shipping tiers: $11.89 / $14.19 / $31.29 / $119.59
-- Premium discount: ~29% (slightly better than stretched)
-- Key sizes: 16×20" = $47.83 std / $34.14 Premium; 18×24" = $54.54 / $38.93; 24×30" = $89.36 / $63.78
+### Product reference doc (`product-reference.md`)
+- Full print size lineup (8×10 through 24×30, landscape variants, coaster, journal)
+- Printify upload dimensions at 300 DPI with bleed calculations
+- 25-location color palettes (3 hex codes each)
+- Contour interval / grid resolution settings guide
+- Calibration checklist for Grand Canyon first run
 
-**Coasters (March 4, 2026)** — all USA providers, verified from Printify catalog
-| Product | Size | Print (Prem) | Ship | COGS | Recommended Retail |
-|---------|------|-------------|------|------|-------------------|
-| Hardboard Back Coaster (Printed Mint ★9.0) | 3.5"×3.5" | $4.52 | $5.49 | $9.01 | $18–22 |
-| Cork Back Coaster (Printed Mint ★9.0) | 3.75" sq / 4" rnd | $4.81 | $5.59 | $10.40 | $18–22 |
-| Corkwood Set of 4 (Colorway ★8.4) | 3.75"×3.75" × 4pcs | $10.66 | $5.59 | $16.25 | $32–42 |
-| Ceramic Coaster (WOYC ★8.6) | 3.94"–4.06" sq/rnd | $5.77 | $4.39 | $10.16 | $18–22 |
-| Soapstone Car Coaster (District Photo ★9.1) | 2.6"×2.6" | $3.41 | $4.59 | $8.00 | $14–18 |
+### Map generation pipeline (`topo-map-creator/`)
+All code written and working. Key files:
 
-> **Best coaster to launch with:** Hardboard Back Coaster ($4.52 Premium + $5.49 ship = $9.01 COGS, 54–62% margin at $18–22 retail). Skip ceramic for launch — too fragile. Corkwood Set of 4 is the best gift-set option.
+| File | Purpose |
+|------|---------|
+| `lib/topo-core.ts` | Shared types + `calculateContourInterval()` + `drawContourLines()` + `chaikinSmooth()` |
+| `lib/elevation-fetch.ts` | Mapbox Terrain-RGB tile fetching (extracted from app API route) |
+| `scripts/locations.ts` | All 25 locations with N/S/E/W bounding boxes + colors + grid resolution |
+| `scripts/generate-maps.ts` | Batch orchestrator — generates light + dark PNGs per location |
+| `app/api/elevation/route.ts` | Refactored to import from lib/elevation-fetch (no duplication) |
 
-**Journals (March 4, 2026)** — verified from Printify catalog
-| Product | Size | Print (Prem) | Ship | COGS | Recommended Retail |
-|---------|------|-------------|------|------|-------------------|
-| Hardcover Journal Matte ⭐ (District Photo ★9.1) | 5.75"×8", 150 lined pages | $6.98 | $5.29 | $12.27 | $24–32 |
-| Spiral Bound Journal (District Photo ★9.1) | One size, 150 lined pages | $8.38 | $5.29 | $13.67 | $27–36 |
+**How to run:**
+```bash
+cd topo-map-creator
+pnpm install
+pnpm generate:maps --location grand-canyon    # test one location
+pnpm generate:maps                            # all 25 locations
+pnpm generate:maps --variant light            # light only
+pnpm generate:maps --variant dark             # dark only
+```
 
-> **Best journal to launch with:** Hardcover Journal Matte ($6.98 Premium + $5.29 ship = $12.27 COGS, bestseller on Printify). Full wraparound print = topo map cover art. Matte finish shows contour line detail better than glossy.
+**Output:** `output/{location-id}/light.png` and `output/{location-id}/dark.png` — 6400×6400 px square masters. All print products are center-cropped from the master in Printify.
 
-### Confirmed product launch plan
-- ✅ Stretched canvas (Jondo Matte 1.25") — entry-price home decor product
-- ✅ Framed canvas (Jondo Matte Framed Multi-color) — hero gift product
-- ✅ Digital downloads — zero COGS, fast demand signal, seeds reviews
-- 🆕 Hardboard Back Coaster — single coaster (~$18–22), demand testing
-- 🆕 Corkwood Set of 4 — coaster gift set (~$32–42), demand testing
-- 🆕 Hardcover Journal Matte — adventure journal cover (~$24–32), demand testing
-
-### Your existing Printify account
-- ✅ Matte Canvas, Framed (Multi-color) by Jondo — teal topo art with purple heart marker (hero product)
-- Softcover journal (already created — can be used or replaced with Hardcover Journal Matte)
-- Scented candles (not part of this plan)
+**Variants:**
+- **light** — white background, colored contour lines (line color per location in `scripts/locations.ts`)
+- **dark** — line color as background, white contour lines
 
 ---
 
-## What to Do in the Next Session
+## Immediate Next Steps (in order)
 
-### Priority 1 (overdue): Walk through the report together
-You said in an earlier session: *"Can we talk through each section together? I want to make sure I understand it but also iterate as needed."* This hasn't happened yet.
+### Step 1 — Visual calibration ✅ DONE (March 6, 2026)
+Grand Canyon test run confirmed `targetLines = 20` produces visually good results (75m interval). Tile retry logic added — no more blank chunks from network timeouts.
 
-Good starting points:
-- **Section 3** (Customer segments) — confirm which segments to target first and with what messaging
-- **Section 5** (Competitive landscape) — confirm your differentiation vs. Mapiful, Topographia Design
-- **Section 7** (P&L model) — review the financial projections and AOV assumptions
-- **Section 8** (Action plan) — walk through the 8 steps and decide what to tackle first
+**How contour density works (for future reference):**
+Each location gets a different contour interval automatically. The function fetches real elevation data, computes the actual min/max, then divides the range by `targetLines`. Smoky Mountains (smaller range) will naturally get tighter intervals than the Tetons (larger range) — both will look visually interesting without any manual tuning.
 
-### Priority 2: Start Etsy setup
-The most concrete next step is to create the Etsy shop and connect Printify:
+To make images more or less crowded in the future, change the single constant in `lib/topo-core.ts`:
+```typescript
+const targetLines = 20  // current — validated ✓ (produces ~20–75m intervals depending on location)
+// Lower = more open/airy (e.g. 20)
+// Higher = denser/more textured (e.g. 50)
+```
 
-1. Create your Etsy shop (if not already done): [etsy.com/sell](https://etsy.com/sell)
+### Step 2 — Calibrate bounding boxes for all 25 locations ← CURRENT
+Hand-estimated bounds are off-center for some locations (Smokies confirmed, others likely too). Full plan in `bounding-box-plan.md`. In short:
+
+1. Write `scripts/calibrate-bounds.ts` — fetches NPS API + OSM Overpass boundary polygons, computes square-corrected bounding boxes, outputs updated `locations.ts` entries
+2. Run it locally (`pnpm calibrate:bounds`), review the diff
+3. Re-run test images for 2–3 locations to confirm improvement
+4. Commit updated `locations.ts` and proceed to Step 3
+
+### Step 3 — Produce initial product images (Wave 1 — 10 locations)
+Once bounding boxes are calibrated:
+```bash
+pnpm generate:maps --location grand-canyon
+pnpm generate:maps --location yosemite
+# ... etc for all Wave 1 locations
+# or just: pnpm generate:maps  (all 25 at once)
+```
+Each run produces `light.png` and `dark.png` per location. Expect ~2–5 minutes per location depending on Mapbox tile fetch speed.
+
+### Step 3 — Upload to Printify and create listings
+For each location × size × colorway:
+1. Go to Printify → Stretched Canvas (Jondo) → Create product
+2. Upload `light.png` or `dark.png` as the design file
+3. Use Printify's cropping tool to center the square master into the target print dimensions
+4. Set title, description, retail price (see Key Numbers below)
+5. Publish to Etsy
+
+No need to create separate image files per print size — Printify crops at upload time.
+
+**Recommended launch set:** Grand Canyon + Yosemite + Grand Teton in light colorway, 16×20" stretched canvas + digital download. 6 listings total. Enough to open the store and start collecting data.
+
+### Step 4 — Set up Etsy store
+1. Create Etsy shop at [etsy.com/sell](https://etsy.com/sell) if not already done
 2. In Printify: Settings → Stores → Connect Etsy store
-3. In your framed canvas product: click "Publish to Etsy" — set initial retail price based on Section 1.4
-4. Create 2–3 additional listings (stretched canvas at 16×20", 18×24" for variety)
-5. Add digital download listings (no Printify needed — upload to Etsy directly as a digital item)
+3. Publish first products from Step 3
 
-### Priority 3: ✅ Initial 25-location catalog — DONE
-See `catalog-locations.md` for the full prioritized list and rationale. Summary:
-- 25 locations across 3 waves (10 / 10 / 5)
-- Wave 1 = 10 national park icons (Grand Canyon through Acadia + Jackson Hole as ski/NP crossover) — enough to launch
-- Waves 2–3 add ski destinations (Breckenridge, Aspen, Vail, Lake Tahoe, Park City), Pacific NW, and a few niche picks
-- ~6 of 25 are ski-primary; all work year-round as outdoor destinations
-- Decision: 20–30 listings does NOT crowd the Etsy offering — each is an independent search entry point
+Etsy shop checklist:
+- Shop name (something geographic / outdoorsy — brainstorm in next session if needed)
+- Banner image (could use one of your topo maps)
+- About section (the story behind the maps — your rendering engine, the process)
+- Shop policies (standard POD policies)
+
+### Step 5 — Set up Shopify (after Etsy has traction)
+Defer until Etsy is generating consistent sales (~$500+/month). Shopify setup is straightforward once Printify integration is in place — it's the same Printify → Shopify sync, just a different storefront.
+
+---
+
+## Open Questions / Decisions Not Yet Made
+
+| Question | Context | How to decide |
+|----------|---------|---------------|
+| **Contour interval** | `targetLines = 20` in `lib/topo-core.ts`. Validated on Grand Canyon (75m interval). Each location auto-computes its own interval from real elevation data. | Adjust `targetLines` up/down if images look too dense or too sparse globally |
+| **Color palette calibration** | Colors in `scripts/locations.ts` are first-pass estimates. Some may look wrong on real terrain. | Review output images, adjust any that look off |
+| **Dark variant viability** | We haven't seen the dark (color bg + white lines) variant yet. May need color tweaks. | Check dark.png in output folder after first run |
+| **Smaller print sizes** | 8×10 and 11×14 added to lineup but not yet tested in Printify. | Test upload + crop flow in Printify Product Creator |
+| **Etsy shop name** | Not yet decided | Brainstorm in next session |
+| **Report walkthrough** | From March 4 session: you wanted to talk through each section of report.md | Schedule a session to do this |
 
 ---
 
 ## Key Numbers at a Glance
 
-**Stretched canvas (Jondo 1.25" — verified)**
-- 16×20" sweet spot: $25.76 std / $19.20 Premium + $8.99 ship → suggest $79–99 retail → ~72–78% margin (Premium)
-- 18×24" sweet spot: $29.21 / $21.77 Premium + $11.79 ship → suggest $99–119 retail → ~72–78% margin
+**Stretched canvas (Jondo 1.25" — Premium pricing)**
+- 8×10": ~$12.80 + $8.99 ship → suggest $45–55 retail
+- 11×14": ~$15.20 + $8.99 ship → suggest $55–65 retail
+- 16×20": $19.20 + $8.99 ship → suggest $79–99 retail → ~72–78% margin
+- 18×24": $21.77 + $11.79 ship → suggest $99–119 retail → ~72–78% margin
 
-**Framed canvas (Jondo Framed Multi-color — verified)**
-- 16×20" sweet spot: $47.83 std / $34.14 Premium + $11.89 ship → suggest $129–149 retail → ~64–69% margin (Premium)
-- 18×24": $54.54 / $38.93 Premium + $14.19 ship → suggest $149–169 retail → ~64–69% margin
-- 24×30": $89.36 / $63.78 Premium + $14.19 ship → suggest $199–229 retail → ~60–66% margin
+**Framed canvas (Jondo Framed Multi-color — Premium)**
+- 16×20": $34.14 + $11.89 ship → suggest $129–149 retail → ~64–69% margin
+- 18×24": $38.93 + $14.19 ship → suggest $149–169 retail
+- 24×30": $63.78 + $14.19 ship → suggest $199–229 retail
 
-**Blended economics (updated product mix)**
-- AOV estimate: ~$103 (mix of digital, stretched, framed canvas orders)
-- Avg net profit per order: ~$55–62 after all costs
-- Break-even at full stack (Etsy fees + Printify Premium + Shopify): ~8 orders/month
-- Target Month 6: $1,000–$3,000/month profit (Starter scenario)
+**Coasters / journals**
+- Hardboard coaster: $4.52 + $5.49 = $9.01 COGS → suggest $18–22 retail
+- Corkwood set of 4: $10.66 + $5.59 = $16.25 COGS → suggest $32–42 retail
+- Hardcover journal: $6.98 + $5.29 = $12.27 COGS → suggest $24–32 retail
 
-**Printify Premium:** $29/mo. Breakeven at 3–4 framed canvas orders per month. After that, every framed 16×20" saves $13.69 and every stretched 16×20" saves $6.56.
+**Digital downloads:** ~$0 COGS → price at $5–15, pure margin
 
----
-
-## Open Research Tasks
-
-### ✅ Initial 25-location catalog — RESOLVED (March 4, 2026)
-
-See `catalog-locations.md` for full detail. Key decisions made:
-
-- Catalog leans hard into outdoor/hiking icons (NPs + peaks) with ~6 ski destinations mixed in
-- Visual quality is not a constraint — any location can look compelling at the right resolution/colors
-- Wedding/anniversary segment deferred to Shopify phase; handled in Etsy phase by a single "Custom Map — Any Location" listing
-- 20–30 listings does not crowd the offering on Etsy
+**Printify Premium:** $29/mo. Break-even at ~3–4 framed canvas orders/month.
 
 ---
 
-## Files in This Repo
+## Files Reference
 
 | File | What it is |
 |------|-----------|
 | `HANDOFF.md` | This document |
-| `report.md` | Full 8-section business research report (markdown) — **current as of March 4, 2026** |
-| `catalog-locations.md` | Prioritized 25-location initial product portfolio — **added March 4, 2026** |
+| `report.md` | Full 8-section business research report |
+| `catalog-locations.md` | Prioritized 25-location product portfolio |
+| `product-reference.md` | Print dimensions, color palettes, settings guide |
+| `../topo-map-creator/` | The rendering engine repo |
+| `../topo-map-creator/scripts/locations.ts` | 25 locations with N/S/E/W bounds + colors |
+| `../topo-map-creator/scripts/generate-maps.ts` | Batch generation script |
+| `../topo-map-creator/lib/topo-core.ts` | Core rendering logic + contour interval math |
+| `../topo-map-creator/lib/elevation-fetch.ts` | Mapbox tile fetching |
+| `../topo-map-creator/output/` | Generated map images (gitignored) |
 
 ---
 
-## Technical Notes (for Claude, not for Teera)
+## Technical Notes (for Claude)
 
-- Printify.com is blocked by the network egress proxy (`EGRESS_BLOCKED`) — must use browser automation (Claude in Chrome), not WebFetch
-- CSS selector that works for scraping Printify pricing tables: `pfy-variants-table-title-row`
-- Printify catalog API endpoint pattern: `https://printify.com/product-catalog-service/api/v2/blueprints/{id}/print-providers?target_market=USA`
-- Shipping API: `https://printify.com/product-catalog-service/api/v2/blueprints/{id}/print-providers/{provider_id}/shipping`
-- Browser fetch calls only work when initiated from a Printify app page (CORS restriction)
-- Blueprint IDs: Stretched canvas = 8 (Jondo), Framed canvas = 944, Hardboard Back Coaster = 807, Cork Back Coaster = 480, Corkwood Set of 4 = 510, Ceramic Coaster = 1523, Soapstone Car Coaster = 1463, Hardcover Journal = 485, Spiral Journal = 486
+- Printify.com is blocked by the network egress proxy — use browser automation (Claude in Chrome), not WebFetch
+- Claude's Cowork VM has no outbound internet — cannot run `pnpm generate:maps` from within Cowork; user must run on their local machine
+- pnpm is the package manager for topo-map-creator; `pnpm install` picks up `@napi-rs/canvas`, `dotenv`, `tsx` which were added to package.json
+- Mapbox token is in `topo-map-creator/.env.local` (NEXT_PUBLIC_MAPBOX_TOKEN)
+- Blueprint IDs: Stretched canvas = 8, Framed canvas = 944, Hardboard coaster = 807, Cork coaster = 480, Corkwood set of 4 = 510, Ceramic coaster = 1523, Hardcover journal = 485, Spiral journal = 486
+- CSS selector for Printify pricing tables: `pfy-variants-table-title-row`
