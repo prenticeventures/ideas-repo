@@ -1,0 +1,4 @@
+[     644ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://seo-panel.printify.com/api/global?locale=en-US&populate=deep:0
+[     893ms] [ERROR] Attestation check for Attribution Reporting on https://www.google-analytics.com failed. @ https://printify.com/app/products/572/generic-brand/copper-vacuum-insulated-bottle-22oz:0
+[     959ms] [ERROR] Attestation check for Attribution Reporting on https://www.facebook.com failed. @ https://printify.com/app/products/572/generic-brand/copper-vacuum-insulated-bottle-22oz:0
+[     959ms] [ERROR] Attestation check for Attribution Reporting on https://www.facebook.com failed. @ https://printify.com/app/products/572/generic-brand/copper-vacuum-insulated-bottle-22oz:0

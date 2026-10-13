@@ -1,0 +1,4 @@
+[    1046ms] [ERROR] Attestation check for Attribution Reporting on https://www.google-analytics.com failed. @ https://printify.com/app/products/1498/polar-camel/insulated-travel-mug-40oz:0
+[    2806ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://seo-panel.printify.com/api/global?locale=en-US&populate=deep:0
+[   28244ms] [ERROR] Attestation check for Attribution Reporting on https://www.facebook.com failed. @ https://printify.com/app/products/1498/polar-camel/insulated-travel-mug-40oz:0
+[   28290ms] [ERROR] Attestation check for Attribution Reporting on https://www.facebook.com failed. @ https://printify.com/app/products/1498/polar-camel/insulated-travel-mug-40oz:0
