@@ -22,3 +22,10 @@ The same article mentions a $25 million federal program announced that week to e
 - How bounty and whistleblower reward programs actually work, including qui tam provisions and what share a reporter can receive.
 - What public data sources exist for spotting this kind of fraud (for example, CMS claims or provider billing data) and what analysis skills or tools they require.
 - Which fraud patterns are most detectable from the outside: phantom services, unnecessary procedures, upcoding, kickback referral rings.
+
+## Research needed
+
+Two questions to answer before judging whether this is viable:
+
+1. How the fraud was detected: in the example case and in general. Was it claims data analysis, a whistleblower, an audit, a referral from an insurer, or something else? Which detection methods are accessible to an outsider versus only to the government or an insurer?
+2. What the whistleblower bounties actually are: which programs pay (for example, False Claims Act qui tam, the $25 million federal whistleblower program mentioned in the article, CMS or other agency programs), what share of a recovery a reporter can receive, what the eligibility and filing requirements are, and how long payouts take.
