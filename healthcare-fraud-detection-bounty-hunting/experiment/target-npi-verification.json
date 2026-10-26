@@ -1,0 +1,76 @@
+{
+  "source": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1346286663",
+  "retrieved_date": "2026-10-25",
+  "response": {
+    "result_count": 1,
+    "results": [
+      {
+        "addresses": [
+          {
+            "address_1": "18375 VENTURA BLVD # 539",
+            "address_purpose": "MAILING",
+            "address_type": "DOM",
+            "city": "TARZANA",
+            "country_code": "US",
+            "country_name": "United States",
+            "fax_number": "949-502-8887",
+            "postal_code": "913564218",
+            "state": "CA",
+            "telephone_number": "714-777-1012"
+          },
+          {
+            "address_1": "400 N FORD BLVD",
+            "address_purpose": "LOCATION",
+            "address_type": "DOM",
+            "city": "LOS ANGELES",
+            "country_code": "US",
+            "country_name": "United States",
+            "fax_number": "949-502-8887",
+            "postal_code": "900221122",
+            "state": "CA",
+            "telephone_number": "818-577-9082"
+          }
+        ],
+        "basic": {
+          "credential": "MD",
+          "enumeration_date": "2006-06-22",
+          "first_name": "HAROLD",
+          "last_name": "TABAIE",
+          "last_updated": "2015-06-29",
+          "middle_name": "A",
+          "name_prefix": "Dr.",
+          "name_suffix": "--",
+          "sex": "M",
+          "sole_proprietor": "YES",
+          "status": "A"
+        },
+        "created_epoch": "1151003603000",
+        "endpoints": [],
+        "enumeration_type": "NPI-1",
+        "identifiers": [],
+        "last_updated_epoch": "1435604743000",
+        "number": "1346286663",
+        "other_names": [],
+        "practiceLocations": [],
+        "taxonomies": [
+          {
+            "code": "208G00000X",
+            "desc": "Thoracic Surgery (Cardiothoracic Vascular Surgery)",
+            "license": "OS5710",
+            "primary": false,
+            "state": "FL",
+            "taxonomy_group": ""
+          },
+          {
+            "code": "208G00000X",
+            "desc": "Thoracic Surgery (Cardiothoracic Vascular Surgery)",
+            "license": "20A4475",
+            "primary": true,
+            "state": "CA",
+            "taxonomy_group": ""
+          }
+        ]
+      }
+    ]
+  }
+}

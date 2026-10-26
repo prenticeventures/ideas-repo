@@ -1,0 +1,10 @@
+year,npi,name,specialty,state,code,place,services,beneficiaries_this_code_place,services_per_beneficiary_this_code_place,estimated_medicare_payment,national_code_place_n,national_volume_rank,national_ratio_rank,specialty_code_place_n,specialty_volume_rank,national_services_median
+2021,1346286663,Harold Tabaie,Vascular Surgery,CA,37225,O,245.0,132.0,1.856061,1252903.64,564,5,11,226,2,24.0
+2021,1346286663,Harold Tabaie,Vascular Surgery,CA,37229,O,250.0,133.0,1.879699,2538771.64,487,9,14,169,1,31.0
+2021,1346286663,Harold Tabaie,Vascular Surgery,CA,37233,O,412.0,119.0,3.462185,456627.84,107,3,1,29,1,24.0
+2022,1346286663,Harold Tabaie,Vascular Surgery,CA,37225,O,293.0,127.0,2.307087,1267777.22,575,4,4,226,1,24.0
+2022,1346286663,Harold Tabaie,Vascular Surgery,CA,37229,O,305.0,128.0,2.382812,2608240.94,522,6,5,183,1,30.0
+2022,1346286663,Harold Tabaie,Vascular Surgery,CA,37233,O,592.0,126.0,4.698413,571653.5,118,2,1,33,1,25.0
+2023,1346286663,Harold Tabaie,Vascular Surgery,CA,37225,O,214.0,96.0,2.229167,881063.96,555,8,5,220,1,26.0
+2023,1346286663,Harold Tabaie,Vascular Surgery,CA,37229,O,215.0,97.0,2.216495,1786456.99,514,14,8,190,2,29.5
+2023,1346286663,Harold Tabaie,Vascular Surgery,CA,37233,O,380.0,97.0,3.917526,357839.33,102,1,1,30,1,25.5

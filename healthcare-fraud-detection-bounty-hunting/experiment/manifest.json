@@ -1,0 +1,367 @@
+{
+  "as_of_date": "2026-10-25",
+  "sources": [
+    {
+      "year": 2021,
+      "code": "37225",
+      "dataset_uuid": "31dc2c47-f297-4948-bfb4-075e1bec3a02",
+      "urls": [
+        "https://data.cms.gov/data-api/v1/dataset/31dc2c47-f297-4948-bfb4-075e1bec3a02/data?filter%5BHCPCS_Cd%5D=37225&size=5000&offset=0"
+      ],
+      "retrieved_at_utc": "2026-10-25T17:53:29.819131+00:00",
+      "row_count": 786,
+      "sha256": "88706b706a084d745e2442a64d936ffd0cb3143f355e71dc2ed2457a9bc02b05",
+      "download_seconds": 1.606
+    },
+    {
+      "year": 2021,
+      "code": "37227",
+      "dataset_uuid": "31dc2c47-f297-4948-bfb4-075e1bec3a02",
+      "urls": [
+        "https://data.cms.gov/data-api/v1/dataset/31dc2c47-f297-4948-bfb4-075e1bec3a02/data?filter%5BHCPCS_Cd%5D=37227&size=5000&offset=0"
+      ],
+      "retrieved_at_utc": "2026-10-25T17:53:29.797426+00:00",
+      "row_count": 391,
+      "sha256": "cd9653597fa95cba950ad1094b9683ab0bf5f68f6a23a9b4e43f42648757c686",
+      "download_seconds": 1.584
+    },
+    {
+      "year": 2021,
+      "code": "37229",
+      "dataset_uuid": "31dc2c47-f297-4948-bfb4-075e1bec3a02",
+      "urls": [
+        "https://data.cms.gov/data-api/v1/dataset/31dc2c47-f297-4948-bfb4-075e1bec3a02/data?filter%5BHCPCS_Cd%5D=37229&size=5000&offset=0"
+      ],
+      "retrieved_at_utc": "2026-10-25T17:53:28.583563+00:00",
+      "row_count": 611,
+      "sha256": "ace45c1679a97bf502e969894b5a6096d7753dfb11831d0e83880fe60ed75503",
+      "download_seconds": 0.371
+    },
+    {
+      "year": 2021,
+      "code": "37231",
+      "dataset_uuid": "31dc2c47-f297-4948-bfb4-075e1bec3a02",
+      "urls": [
+        "https://data.cms.gov/data-api/v1/dataset/31dc2c47-f297-4948-bfb4-075e1bec3a02/data?filter%5BHCPCS_Cd%5D=37231&size=5000&offset=0"
+      ],
+      "retrieved_at_utc": "2026-10-25T17:53:28.582362+00:00",
+      "row_count": 50,
+      "sha256": "6bb1faabfedd38399e6e4262f5483c52e0e78dbb9fa30395245c2f0537fb8e4f",
+      "download_seconds": 0.369
+    },
+    {
+      "year": 2021,
+      "code": "37233",
+      "dataset_uuid": "31dc2c47-f297-4948-bfb4-075e1bec3a02",
+      "urls": [
+        "https://data.cms.gov/data-api/v1/dataset/31dc2c47-f297-4948-bfb4-075e1bec3a02/data?filter%5BHCPCS_Cd%5D=37233&size=5000&offset=0"
+      ],
+      "retrieved_at_utc": "2026-10-25T17:53:29.728788+00:00",
+      "row_count": 112,
+      "sha256": "edf29299cf47ef1bcdfb5ea99e0860acffb05f4db734bb6c3c28ae8ac9c23e60",
+      "download_seconds": 1.145
+    },
+    {
+      "year": 2021,
+      "code": "37235",
+      "dataset_uuid": "31dc2c47-f297-4948-bfb4-075e1bec3a02",
+      "urls": [
+        "https://data.cms.gov/data-api/v1/dataset/31dc2c47-f297-4948-bfb4-075e1bec3a02/data?filter%5BHCPCS_Cd%5D=37235&size=5000&offset=0"
+      ],
+      "retrieved_at_utc": "2026-10-25T17:53:29.818604+00:00",
+      "row_count": 3,
+      "sha256": "28172201978cb5a2890e8b2f58b747f1858c81ac9c8f486b621984e403e12dc0",
+      "download_seconds": 1.234
+    },
+    {
+      "year": 2022,
+      "code": "37225",
+      "dataset_uuid": "e650987d-01b7-4f09-b75e-b0b075afbf98",
+      "urls": [
+        "https://data.cms.gov/data-api/v1/dataset/e650987d-01b7-4f09-b75e-b0b075afbf98/data?filter%5BHCPCS_Cd%5D=37225&size=5000&offset=0"
+      ],
+      "retrieved_at_utc": "2026-10-25T17:53:30.038827+00:00",
+      "row_count": 753,
+      "sha256": "f6687a8b3f377e1175af0fbcb078471af232854cf3ad9bf362d0c90f4d5c86cd",
+      "download_seconds": 0.31
+    },
+    {
+      "year": 2022,
+      "code": "37227",
+      "dataset_uuid": "e650987d-01b7-4f09-b75e-b0b075afbf98",
+      "urls": [
+        "https://data.cms.gov/data-api/v1/dataset/e650987d-01b7-4f09-b75e-b0b075afbf98/data?filter%5BHCPCS_Cd%5D=37227&size=5000&offset=0"
+      ],
+      "retrieved_at_utc": "2026-10-25T17:53:30.073031+00:00",
+      "row_count": 367,
+      "sha256": "8391972c4009b44a86738a2e010da304e9a5f6ecfe679bb3eac0b52f876d2570",
+      "download_seconds": 0.275
+    },
+    {
+      "year": 2022,
+      "code": "37229",
+      "dataset_uuid": "e650987d-01b7-4f09-b75e-b0b075afbf98",
+      "urls": [
+        "https://data.cms.gov/data-api/v1/dataset/e650987d-01b7-4f09-b75e-b0b075afbf98/data?filter%5BHCPCS_Cd%5D=37229&size=5000&offset=0"
+      ],
+      "retrieved_at_utc": "2026-10-25T17:53:30.134320+00:00",
+      "row_count": 613,
+      "sha256": "3bdbef9f954b71c6b18b3617c1aa47d23f62c8453204f9068e3e05a4814d2826",
+      "download_seconds": 0.316
+    },
+    {
+      "year": 2022,
+      "code": "37231",
+      "dataset_uuid": "e650987d-01b7-4f09-b75e-b0b075afbf98",
+      "urls": [
+        "https://data.cms.gov/data-api/v1/dataset/e650987d-01b7-4f09-b75e-b0b075afbf98/data?filter%5BHCPCS_Cd%5D=37231&size=5000&offset=0"
+      ],
+      "retrieved_at_utc": "2026-10-25T17:53:30.038769+00:00",
+      "row_count": 50,
+      "sha256": "4c1b8e1dc260a6322c47c62ab507c18cc810ca00037cd9456a7a433e62484b6c",
+      "download_seconds": 0.219
+    },
+    {
+      "year": 2022,
+      "code": "37233",
+      "dataset_uuid": "e650987d-01b7-4f09-b75e-b0b075afbf98",
+      "urls": [
+        "https://data.cms.gov/data-api/v1/dataset/e650987d-01b7-4f09-b75e-b0b075afbf98/data?filter%5BHCPCS_Cd%5D=37233&size=5000&offset=0"
+      ],
+      "retrieved_at_utc": "2026-10-25T17:53:30.281858+00:00",
+      "row_count": 124,
+      "sha256": "df5e3bce934efbd90217cc37a71bb5e0dc33e0fa3fdac03fbf9e1da4b4b35f0d",
+      "download_seconds": 0.243
+    },
+    {
+      "year": 2022,
+      "code": "37235",
+      "dataset_uuid": "e650987d-01b7-4f09-b75e-b0b075afbf98",
+      "urls": [
+        "https://data.cms.gov/data-api/v1/dataset/e650987d-01b7-4f09-b75e-b0b075afbf98/data?filter%5BHCPCS_Cd%5D=37235&size=5000&offset=0"
+      ],
+      "retrieved_at_utc": "2026-10-25T17:53:30.223018+00:00",
+      "row_count": 1,
+      "sha256": "babd56e5d199edec78c285803517f8d2c871e40c76d9d13f569376a459341545",
+      "download_seconds": 0.183
+    },
+    {
+      "year": 2023,
+      "code": "37225",
+      "dataset_uuid": "0e9f2f2b-7bf9-451a-912c-e02e654dd725",
+      "urls": [
+        "https://data.cms.gov/data-api/v1/dataset/0e9f2f2b-7bf9-451a-912c-e02e654dd725/data?filter%5BHCPCS_Cd%5D=37225&size=5000&offset=0"
+      ],
+      "retrieved_at_utc": "2026-10-25T17:53:30.446464+00:00",
+      "row_count": 729,
+      "sha256": "c06f3e7572b5f96914ceca546862ac8374ee46da35c686119879544a47d1788d",
+      "download_seconds": 0.373
+    },
+    {
+      "year": 2023,
+      "code": "37227",
+      "dataset_uuid": "0e9f2f2b-7bf9-451a-912c-e02e654dd725",
+      "urls": [
+        "https://data.cms.gov/data-api/v1/dataset/0e9f2f2b-7bf9-451a-912c-e02e654dd725/data?filter%5BHCPCS_Cd%5D=37227&size=5000&offset=0"
+      ],
+      "retrieved_at_utc": "2026-10-25T17:53:30.415622+00:00",
+      "row_count": 368,
+      "sha256": "43608202ba43b43bbe26e08be9f4049c37b6731e8855fe67306cef6ed4f40750",
+      "download_seconds": 0.281
+    },
+    {
+      "year": 2023,
+      "code": "37229",
+      "dataset_uuid": "0e9f2f2b-7bf9-451a-912c-e02e654dd725",
+      "urls": [
+        "https://data.cms.gov/data-api/v1/dataset/0e9f2f2b-7bf9-451a-912c-e02e654dd725/data?filter%5BHCPCS_Cd%5D=37229&size=5000&offset=0"
+      ],
+      "retrieved_at_utc": "2026-10-25T17:53:30.543911+00:00",
+      "row_count": 616,
+      "sha256": "6361e4cef8cae2acdf406bf0ef24930246ab481de3e28852c380a7d7abacfc21",
+      "download_seconds": 0.32
+    },
+    {
+      "year": 2023,
+      "code": "37231",
+      "dataset_uuid": "0e9f2f2b-7bf9-451a-912c-e02e654dd725",
+      "urls": [
+        "https://data.cms.gov/data-api/v1/dataset/0e9f2f2b-7bf9-451a-912c-e02e654dd725/data?filter%5BHCPCS_Cd%5D=37231&size=5000&offset=0"
+      ],
+      "retrieved_at_utc": "2026-10-25T17:53:30.495976+00:00",
+      "row_count": 45,
+      "sha256": "18104b2fdf4ee34e61a04d207b7b4a29f24b698c8725c5cecffc01eef4847d93",
+      "download_seconds": 0.213
+    },
+    {
+      "year": 2023,
+      "code": "37233",
+      "dataset_uuid": "0e9f2f2b-7bf9-451a-912c-e02e654dd725",
+      "urls": [
+        "https://data.cms.gov/data-api/v1/dataset/0e9f2f2b-7bf9-451a-912c-e02e654dd725/data?filter%5BHCPCS_Cd%5D=37233&size=5000&offset=0"
+      ],
+      "retrieved_at_utc": "2026-10-25T17:53:30.721881+00:00",
+      "row_count": 110,
+      "sha256": "ada6e927db2faccc31f7e36c57f907150931de9069bdf4f021ab9e1504f1da51",
+      "download_seconds": 0.305
+    },
+    {
+      "year": 2023,
+      "code": "37235",
+      "dataset_uuid": "0e9f2f2b-7bf9-451a-912c-e02e654dd725",
+      "urls": [
+        "https://data.cms.gov/data-api/v1/dataset/0e9f2f2b-7bf9-451a-912c-e02e654dd725/data?filter%5BHCPCS_Cd%5D=37235&size=5000&offset=0"
+      ],
+      "retrieved_at_utc": "2026-10-25T17:53:31.735726+00:00",
+      "row_count": 1,
+      "sha256": "55dfa396faa046ccf99d0ceb77653cd4c9a1ed6ad30dc2148cd9fd7445b03627",
+      "download_seconds": 1.289
+    }
+  ],
+  "quality_checks": [
+    {
+      "year": 2021,
+      "code": "37225",
+      "rows": 786,
+      "unique_keys": 786,
+      "min_beneficiaries": 11.0,
+      "all_filter_values_match": true
+    },
+    {
+      "year": 2021,
+      "code": "37227",
+      "rows": 391,
+      "unique_keys": 391,
+      "min_beneficiaries": 11.0,
+      "all_filter_values_match": true
+    },
+    {
+      "year": 2021,
+      "code": "37229",
+      "rows": 611,
+      "unique_keys": 611,
+      "min_beneficiaries": 11.0,
+      "all_filter_values_match": true
+    },
+    {
+      "year": 2021,
+      "code": "37231",
+      "rows": 50,
+      "unique_keys": 50,
+      "min_beneficiaries": 11.0,
+      "all_filter_values_match": true
+    },
+    {
+      "year": 2021,
+      "code": "37233",
+      "rows": 112,
+      "unique_keys": 112,
+      "min_beneficiaries": 11.0,
+      "all_filter_values_match": true
+    },
+    {
+      "year": 2021,
+      "code": "37235",
+      "rows": 3,
+      "unique_keys": 3,
+      "min_beneficiaries": 30.0,
+      "all_filter_values_match": true
+    },
+    {
+      "year": 2022,
+      "code": "37225",
+      "rows": 753,
+      "unique_keys": 753,
+      "min_beneficiaries": 11.0,
+      "all_filter_values_match": true
+    },
+    {
+      "year": 2022,
+      "code": "37227",
+      "rows": 367,
+      "unique_keys": 367,
+      "min_beneficiaries": 11.0,
+      "all_filter_values_match": true
+    },
+    {
+      "year": 2022,
+      "code": "37229",
+      "rows": 613,
+      "unique_keys": 613,
+      "min_beneficiaries": 11.0,
+      "all_filter_values_match": true
+    },
+    {
+      "year": 2022,
+      "code": "37231",
+      "rows": 50,
+      "unique_keys": 50,
+      "min_beneficiaries": 11.0,
+      "all_filter_values_match": true
+    },
+    {
+      "year": 2022,
+      "code": "37233",
+      "rows": 124,
+      "unique_keys": 124,
+      "min_beneficiaries": 11.0,
+      "all_filter_values_match": true
+    },
+    {
+      "year": 2022,
+      "code": "37235",
+      "rows": 1,
+      "unique_keys": 1,
+      "min_beneficiaries": 106.0,
+      "all_filter_values_match": true
+    },
+    {
+      "year": 2023,
+      "code": "37225",
+      "rows": 729,
+      "unique_keys": 729,
+      "min_beneficiaries": 11.0,
+      "all_filter_values_match": true
+    },
+    {
+      "year": 2023,
+      "code": "37227",
+      "rows": 368,
+      "unique_keys": 368,
+      "min_beneficiaries": 11.0,
+      "all_filter_values_match": true
+    },
+    {
+      "year": 2023,
+      "code": "37229",
+      "rows": 616,
+      "unique_keys": 616,
+      "min_beneficiaries": 11.0,
+      "all_filter_values_match": true
+    },
+    {
+      "year": 2023,
+      "code": "37231",
+      "rows": 45,
+      "unique_keys": 45,
+      "min_beneficiaries": 11.0,
+      "all_filter_values_match": true
+    },
+    {
+      "year": 2023,
+      "code": "37233",
+      "rows": 110,
+      "unique_keys": 110,
+      "min_beneficiaries": 11.0,
+      "all_filter_values_match": true
+    },
+    {
+      "year": 2023,
+      "code": "37235",
+      "rows": 1,
+      "unique_keys": 1,
+      "min_beneficiaries": 11.0,
+      "all_filter_values_match": true
+    }
+  ]
+}

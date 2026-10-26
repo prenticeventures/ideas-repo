@@ -1,0 +1,14 @@
+{
+  "source_url": "https://www.doa.louisiana.gov/media/ogee2gb4/50.docx",
+  "retrieved_utc": "2026-10-25",
+  "retrieval_method": "Python requests GET using the default user agent; response saved as DOCX, then extracted locally with python-docx.",
+  "http_status": 200,
+  "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  "bytes": 1456659,
+  "sha256": "cf72e3cb54fcf1386bf74aab7072119a20d4edf71daf383d0100e64e46a00602",
+  "saved_docx": "/Users/teeraprice/Code/ideas-repo/healthcare-fraud-detection-bounty-hunting/research/access-evidence/louisiana-lac-title50-current-2026-10-25.docx",
+  "saved_excerpt": "/Users/teeraprice/Code/ideas-repo/healthcare-fraud-detection-bounty-hunting/research/access-evidence/louisiana-lac-title50-section4605-excerpt-2026-10-25.txt",
+  "section": "Louisiana Administrative Code, Title 50, § 4605 Tip Rewards",
+  "section_paragraph_index": 3596,
+  "excerpt": "§4605.\tTip Rewards\nA.\tThe secretary may approve a reward of up to $2,000 to a person who submits information to the secretary resulting in a recovery under this Chapter or the Medical Assistance Programs Integrity Law.\nB.\tAny award shall be granted from monies appropriated for this purpose from the Medical Assistance Programs Fraud Detection Fund for that purpose. \nC.\tThe approval of a reward is solely at the discretion of the secretary. \nD.\tWhen determining a reward, the secretary shall consider the extent to which the information contributed to the investigation and recovery of monies. \nE.\tThe person providing the information need not have requested a reward to be considered for an award.\nAUTHORITY NOTE:\tPromulgated in accordance with R.S. 36:254 and 46:437.1-46:440.3.\nHISTORICAL NOTE:\tPromulgated by the Department of Health, Bureau of Health Services Financing, LR 52:700 (May 2026). "
+}

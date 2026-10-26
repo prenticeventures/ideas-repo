@@ -1,0 +1,76 @@
+{
+  "target_npi": "1346286663",
+  "years": [
+    2021,
+    2022,
+    2023
+  ],
+  "primary_codes": [
+    "37225",
+    "37227",
+    "37229",
+    "37231"
+  ],
+  "addon_codes_separate": [
+    "37233",
+    "37235"
+  ],
+  "raw_rows": 5730,
+  "requests": 18,
+  "all_checks_passed": true,
+  "target_year_results": [
+    {
+      "year": 2021,
+      "npi": "1346286663",
+      "name": "Harold Tabaie",
+      "state": "CA",
+      "specialty": "Vascular Surgery",
+      "place": "O",
+      "primary_code_units": 495.0,
+      "addon_code_units_separate": 412.0,
+      "primary_codes_observed": "37225,37229",
+      "estimated_primary_medicare_payment": 3791675.28,
+      "estimated_primary_submitted_charges": 7175000.0,
+      "national_same_place_n": 695,
+      "national_primary_unit_rank": 12,
+      "specialty_same_place_n": 271,
+      "specialty_primary_unit_rank": 2
+    },
+    {
+      "year": 2022,
+      "npi": "1346286663",
+      "name": "Harold Tabaie",
+      "state": "CA",
+      "specialty": "Vascular Surgery",
+      "place": "O",
+      "primary_code_units": 598.0,
+      "addon_code_units_separate": 592.0,
+      "primary_codes_observed": "37225,37229",
+      "estimated_primary_medicare_payment": 3876018.16,
+      "estimated_primary_submitted_charges": 8667000.0,
+      "national_same_place_n": 711,
+      "national_primary_unit_rank": 7,
+      "specialty_same_place_n": 274,
+      "specialty_primary_unit_rank": 1
+    },
+    {
+      "year": 2023,
+      "npi": "1346286663",
+      "name": "Harold Tabaie",
+      "state": "CA",
+      "specialty": "Vascular Surgery",
+      "place": "O",
+      "primary_code_units": 429.0,
+      "addon_code_units_separate": 380.0,
+      "primary_codes_observed": "37225,37229",
+      "estimated_primary_medicare_payment": 2667520.95,
+      "estimated_primary_submitted_charges": 6310000.0,
+      "national_same_place_n": 695,
+      "national_primary_unit_rank": 14,
+      "specialty_same_place_n": 283,
+      "specialty_primary_unit_rank": 1
+    }
+  ],
+  "top20_target_present": true,
+  "warning": "Retrospective exploratory screen; units are not surgeries; beneficiaries overlap across codes; published >10-beneficiary cells only; no accuracy estimate or fraud finding."
+}

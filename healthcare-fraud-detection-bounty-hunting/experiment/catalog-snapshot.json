@@ -1,0 +1,426 @@
+{
+  "retrieved_date": "2026-10-25",
+  "source": "https://data.cms.gov/data.json",
+  "datasets": [
+    {
+      "@id": "https://data.cms.gov/data-api/v1/dataset/31dc2c47-f297-4948-bfb4-075e1bec3a02/data-viewer",
+      "@type": "Dataset",
+      "title": "Medicare Physician & Other Practitioners - by Provider and Service : 2021-12-02",
+      "description": "The Medicare Physician & Other Practitioners by Provider and Service dataset provides information on use, payments, and submitted charges organized by National Provider Identifier (NPI), Healthcare Common Procedure Coding System (HCPCS) code, and place of service.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Office of Enterprise Data and Analytics (OEDA)",
+        "subOrganizationOf": [
+          {
+            "@type": "Organization",
+            "name": "Centers for Medicare and Medicaid Services (CMS)"
+          }
+        ]
+      },
+      "contactPoint": {
+        "@type": "Kind",
+        "fn": "Medicare Provider Data - OEDA",
+        "hasEmail": "mailto:IPAG_Data_Products@cms.hhs.gov"
+      },
+      "identifier": "https://data.cms.gov/data-api/v1/dataset/31dc2c47-f297-4948-bfb4-075e1bec3a02/data-viewer",
+      "accessRights": "public",
+      "sourceSite": "data.cms.gov",
+      "sourceCatalog": "https://data.cms.gov/data.json",
+      "modified": "2025-03-26",
+      "language": [
+        "en"
+      ],
+      "temporal": [
+        {
+          "@type": "PeriodOfTime",
+          "startDate": "2021-01-01",
+          "endDate": "2021-12-31"
+        }
+      ],
+      "landingPage": {
+        "@type": "Document",
+        "title": "Medicare Physician & Other Practitioners - by Provider and Service",
+        "accessURL": "https://data.cms.gov/provider-summary-by-type-of-service/medicare-physician-other-practitioners/medicare-physician-other-practitioners-by-provider-and-service"
+      },
+      "describedBy": {
+        "@type": "Distribution",
+        "title": "Medicare Physician & Other Practitioners - by Provider and Service Data Dictionary",
+        "downloadURL": "https://data.cms.gov/resources/medicare-physician-other-practitioners-by-provider-and-service-data-dictionary"
+      },
+      "keyword": [
+        "Medicare",
+        "Original Medicare",
+        "Physicians & Practitioners",
+        "Health Care Use & Payments",
+        "Health Equity"
+      ],
+      "theme": [
+        "Medicare"
+      ],
+      "accrualPeriodicity": "annually",
+      "accessLevel": "public",
+      "bureauCode": [
+        "009:38"
+      ],
+      "programCode": [
+        "009:000"
+      ],
+      "references": [
+        "https://data.cms.gov/resources/medicare-physician-other-practitioners-methodology"
+      ],
+      "distribution": [
+        {
+          "@type": "Distribution",
+          "downloadURL": "https://data.cms.gov/sites/default/files/2025-11/bffaf97a-c2ab-4fd7-8718-be90742e3485/MUP_PHY_R25_P05_V20_D21_Prov_Svc.csv",
+          "mediaType": "text/csv",
+          "format": "CSV",
+          "resourcesAPI": "https://data.cms.gov/data-api/v1/dataset-resources/31dc2c47-f297-4948-bfb4-075e1bec3a02",
+          "title": "Medicare Physician & Other Practitioners - by Provider and Service : 2021-12-02",
+          "describedBy": {
+            "@type": "Distribution",
+            "title": "Data dictionary for Medicare Physician & Other Practitioners - by Provider and Service : 2021-12-02",
+            "downloadURL": "https://data.cms.gov/data-api/v1/dataset/31dc2c47-f297-4948-bfb4-075e1bec3a02/dictionary",
+            "mediaType": "application/json"
+          },
+          "modified": "2025-03-26",
+          "temporal": [
+            {
+              "@type": "PeriodOfTime",
+              "startDate": "2021-01-01",
+              "endDate": "2021-12-31"
+            }
+          ],
+          "license": "https://www.usa.gov/government-works"
+        },
+        {
+          "@type": "Distribution",
+          "format": "API",
+          "accessURL": "https://data.cms.gov/data-api/v1/dataset/31dc2c47-f297-4948-bfb4-075e1bec3a02/data",
+          "resourcesAPI": "https://data.cms.gov/data-api/v1/dataset-resources/31dc2c47-f297-4948-bfb4-075e1bec3a02",
+          "title": "Medicare Physician & Other Practitioners - by Provider and Service : 2021-12-02",
+          "describedBy": {
+            "@type": "Distribution",
+            "title": "Data dictionary for Medicare Physician & Other Practitioners - by Provider and Service : 2021-12-02",
+            "downloadURL": "https://data.cms.gov/data-api/v1/dataset/31dc2c47-f297-4948-bfb4-075e1bec3a02/dictionary",
+            "mediaType": "application/json"
+          },
+          "modified": "2025-03-26",
+          "temporal": [
+            {
+              "@type": "PeriodOfTime",
+              "startDate": "2021-01-01",
+              "endDate": "2021-12-31"
+            }
+          ],
+          "license": "https://www.usa.gov/government-works"
+        }
+      ],
+      "inSeries": [
+        {
+          "@id": "https://data.cms.gov/data-api/v1/dataset/92396110-2aed-4d63-a6a2-5d6207d46a29/data",
+          "@type": "DatasetSeries",
+          "title": "Medicare Physician & Other Practitioners - by Provider and Service",
+          "description": "The Medicare Physician & Other Practitioners by Provider and Service dataset provides information on use, payments, and submitted charges organized by National Provider Identifier (NPI), Healthcare Common Procedure Coding System (HCPCS) code, and place of service.",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Office of Enterprise Data and Analytics (OEDA)",
+            "subOrganizationOf": [
+              {
+                "@type": "Organization",
+                "name": "Centers for Medicare and Medicaid Services (CMS)"
+              }
+            ]
+          },
+          "contactPoint": [
+            {
+              "@type": "Kind",
+              "fn": "Medicare Provider Data - OEDA",
+              "hasEmail": "mailto:IPAG_Data_Products@cms.hhs.gov"
+            }
+          ],
+          "identifier": "https://data.cms.gov/data-api/v1/dataset/92396110-2aed-4d63-a6a2-5d6207d46a29/data"
+        }
+      ]
+    },
+    {
+      "@id": "https://data.cms.gov/data-api/v1/dataset/e650987d-01b7-4f09-b75e-b0b075afbf98/data-viewer",
+      "@type": "Dataset",
+      "title": "Medicare Physician & Other Practitioners - by Provider and Service : 2022-12-02",
+      "description": "The Medicare Physician & Other Practitioners by Provider and Service dataset provides information on use, payments, and submitted charges organized by National Provider Identifier (NPI), Healthcare Common Procedure Coding System (HCPCS) code, and place of service.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Office of Enterprise Data and Analytics (OEDA)",
+        "subOrganizationOf": [
+          {
+            "@type": "Organization",
+            "name": "Centers for Medicare and Medicaid Services (CMS)"
+          }
+        ]
+      },
+      "contactPoint": {
+        "@type": "Kind",
+        "fn": "Medicare Provider Data - OEDA",
+        "hasEmail": "mailto:IPAG_Data_Products@cms.hhs.gov"
+      },
+      "identifier": "https://data.cms.gov/data-api/v1/dataset/e650987d-01b7-4f09-b75e-b0b075afbf98/data-viewer",
+      "accessRights": "public",
+      "sourceSite": "data.cms.gov",
+      "sourceCatalog": "https://data.cms.gov/data.json",
+      "modified": "2025-03-26",
+      "language": [
+        "en"
+      ],
+      "temporal": [
+        {
+          "@type": "PeriodOfTime",
+          "startDate": "2022-01-01",
+          "endDate": "2022-12-31"
+        }
+      ],
+      "landingPage": {
+        "@type": "Document",
+        "title": "Medicare Physician & Other Practitioners - by Provider and Service",
+        "accessURL": "https://data.cms.gov/provider-summary-by-type-of-service/medicare-physician-other-practitioners/medicare-physician-other-practitioners-by-provider-and-service"
+      },
+      "describedBy": {
+        "@type": "Distribution",
+        "title": "Medicare Physician & Other Practitioners - by Provider and Service Data Dictionary",
+        "downloadURL": "https://data.cms.gov/resources/medicare-physician-other-practitioners-by-provider-and-service-data-dictionary"
+      },
+      "keyword": [
+        "Medicare",
+        "Original Medicare",
+        "Physicians & Practitioners",
+        "Health Care Use & Payments",
+        "Health Equity"
+      ],
+      "theme": [
+        "Medicare"
+      ],
+      "accrualPeriodicity": "annually",
+      "accessLevel": "public",
+      "bureauCode": [
+        "009:38"
+      ],
+      "programCode": [
+        "009:000"
+      ],
+      "references": [
+        "https://data.cms.gov/resources/medicare-physician-other-practitioners-methodology"
+      ],
+      "distribution": [
+        {
+          "@type": "Distribution",
+          "downloadURL": "https://data.cms.gov/sites/default/files/2025-11/53fb2bae-4913-48dc-a6d4-d8c025906567/MUP_PHY_R25_P05_V20_D22_Prov_Svc.csv",
+          "mediaType": "text/csv",
+          "format": "CSV",
+          "resourcesAPI": "https://data.cms.gov/data-api/v1/dataset-resources/e650987d-01b7-4f09-b75e-b0b075afbf98",
+          "title": "Medicare Physician & Other Practitioners - by Provider and Service : 2022-12-02",
+          "describedBy": {
+            "@type": "Distribution",
+            "title": "Data dictionary for Medicare Physician & Other Practitioners - by Provider and Service : 2022-12-02",
+            "downloadURL": "https://data.cms.gov/data-api/v1/dataset/e650987d-01b7-4f09-b75e-b0b075afbf98/dictionary",
+            "mediaType": "application/json"
+          },
+          "modified": "2025-03-26",
+          "temporal": [
+            {
+              "@type": "PeriodOfTime",
+              "startDate": "2022-01-01",
+              "endDate": "2022-12-31"
+            }
+          ],
+          "license": "https://www.usa.gov/government-works"
+        },
+        {
+          "@type": "Distribution",
+          "format": "API",
+          "accessURL": "https://data.cms.gov/data-api/v1/dataset/e650987d-01b7-4f09-b75e-b0b075afbf98/data",
+          "resourcesAPI": "https://data.cms.gov/data-api/v1/dataset-resources/e650987d-01b7-4f09-b75e-b0b075afbf98",
+          "title": "Medicare Physician & Other Practitioners - by Provider and Service : 2022-12-02",
+          "describedBy": {
+            "@type": "Distribution",
+            "title": "Data dictionary for Medicare Physician & Other Practitioners - by Provider and Service : 2022-12-02",
+            "downloadURL": "https://data.cms.gov/data-api/v1/dataset/e650987d-01b7-4f09-b75e-b0b075afbf98/dictionary",
+            "mediaType": "application/json"
+          },
+          "modified": "2025-03-26",
+          "temporal": [
+            {
+              "@type": "PeriodOfTime",
+              "startDate": "2022-01-01",
+              "endDate": "2022-12-31"
+            }
+          ],
+          "license": "https://www.usa.gov/government-works"
+        }
+      ],
+      "inSeries": [
+        {
+          "@id": "https://data.cms.gov/data-api/v1/dataset/92396110-2aed-4d63-a6a2-5d6207d46a29/data",
+          "@type": "DatasetSeries",
+          "title": "Medicare Physician & Other Practitioners - by Provider and Service",
+          "description": "The Medicare Physician & Other Practitioners by Provider and Service dataset provides information on use, payments, and submitted charges organized by National Provider Identifier (NPI), Healthcare Common Procedure Coding System (HCPCS) code, and place of service.",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Office of Enterprise Data and Analytics (OEDA)",
+            "subOrganizationOf": [
+              {
+                "@type": "Organization",
+                "name": "Centers for Medicare and Medicaid Services (CMS)"
+              }
+            ]
+          },
+          "contactPoint": [
+            {
+              "@type": "Kind",
+              "fn": "Medicare Provider Data - OEDA",
+              "hasEmail": "mailto:IPAG_Data_Products@cms.hhs.gov"
+            }
+          ],
+          "identifier": "https://data.cms.gov/data-api/v1/dataset/92396110-2aed-4d63-a6a2-5d6207d46a29/data"
+        }
+      ]
+    },
+    {
+      "@id": "https://data.cms.gov/data-api/v1/dataset/0e9f2f2b-7bf9-451a-912c-e02e654dd725/data-viewer",
+      "@type": "Dataset",
+      "title": "Medicare Physician & Other Practitioners - by Provider and Service : 2023-12-31",
+      "description": "The Medicare Physician & Other Practitioners by Provider and Service dataset provides information on use, payments, and submitted charges organized by National Provider Identifier (NPI), Healthcare Common Procedure Coding System (HCPCS) code, and place of service.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Office of Enterprise Data and Analytics (OEDA)",
+        "subOrganizationOf": [
+          {
+            "@type": "Organization",
+            "name": "Centers for Medicare and Medicaid Services (CMS)"
+          }
+        ]
+      },
+      "contactPoint": {
+        "@type": "Kind",
+        "fn": "Medicare Provider Data - OEDA",
+        "hasEmail": "mailto:IPAG_Data_Products@cms.hhs.gov"
+      },
+      "identifier": "https://data.cms.gov/data-api/v1/dataset/0e9f2f2b-7bf9-451a-912c-e02e654dd725/data-viewer",
+      "accessRights": "public",
+      "sourceSite": "data.cms.gov",
+      "sourceCatalog": "https://data.cms.gov/data.json",
+      "modified": "2025-10-28",
+      "language": [
+        "en"
+      ],
+      "temporal": [
+        {
+          "@type": "PeriodOfTime",
+          "startDate": "2023-01-01",
+          "endDate": "2023-12-31"
+        }
+      ],
+      "landingPage": {
+        "@type": "Document",
+        "title": "Medicare Physician & Other Practitioners - by Provider and Service",
+        "accessURL": "https://data.cms.gov/provider-summary-by-type-of-service/medicare-physician-other-practitioners/medicare-physician-other-practitioners-by-provider-and-service"
+      },
+      "describedBy": {
+        "@type": "Distribution",
+        "title": "Medicare Physician & Other Practitioners - by Provider and Service Data Dictionary",
+        "downloadURL": "https://data.cms.gov/resources/medicare-physician-other-practitioners-by-provider-and-service-data-dictionary"
+      },
+      "keyword": [
+        "Medicare",
+        "Original Medicare",
+        "Physicians & Practitioners",
+        "Health Care Use & Payments",
+        "Health Equity"
+      ],
+      "theme": [
+        "Medicare"
+      ],
+      "accrualPeriodicity": "annually",
+      "accessLevel": "public",
+      "bureauCode": [
+        "009:38"
+      ],
+      "programCode": [
+        "009:000"
+      ],
+      "references": [
+        "https://data.cms.gov/resources/medicare-physician-other-practitioners-methodology"
+      ],
+      "distribution": [
+        {
+          "@type": "Distribution",
+          "downloadURL": "https://data.cms.gov/sites/default/files/2025-04/e3f823f8-db5b-4cc7-ba04-e7ae92b99757/MUP_PHY_R25_P05_V20_D23_Prov_Svc.csv",
+          "mediaType": "text/csv",
+          "format": "CSV",
+          "resourcesAPI": "https://data.cms.gov/data-api/v1/dataset-resources/0e9f2f2b-7bf9-451a-912c-e02e654dd725",
+          "title": "Medicare Physician & Other Practitioners - by Provider and Service : 2023-12-31",
+          "describedBy": {
+            "@type": "Distribution",
+            "title": "Data dictionary for Medicare Physician & Other Practitioners - by Provider and Service : 2023-12-31",
+            "downloadURL": "https://data.cms.gov/data-api/v1/dataset/0e9f2f2b-7bf9-451a-912c-e02e654dd725/dictionary",
+            "mediaType": "application/json"
+          },
+          "modified": "2025-10-28",
+          "temporal": [
+            {
+              "@type": "PeriodOfTime",
+              "startDate": "2023-01-01",
+              "endDate": "2023-12-31"
+            }
+          ],
+          "license": "https://www.usa.gov/government-works"
+        },
+        {
+          "@type": "Distribution",
+          "format": "API",
+          "accessURL": "https://data.cms.gov/data-api/v1/dataset/0e9f2f2b-7bf9-451a-912c-e02e654dd725/data",
+          "resourcesAPI": "https://data.cms.gov/data-api/v1/dataset-resources/0e9f2f2b-7bf9-451a-912c-e02e654dd725",
+          "title": "Medicare Physician & Other Practitioners - by Provider and Service : 2023-12-31",
+          "describedBy": {
+            "@type": "Distribution",
+            "title": "Data dictionary for Medicare Physician & Other Practitioners - by Provider and Service : 2023-12-31",
+            "downloadURL": "https://data.cms.gov/data-api/v1/dataset/0e9f2f2b-7bf9-451a-912c-e02e654dd725/dictionary",
+            "mediaType": "application/json"
+          },
+          "modified": "2025-10-28",
+          "temporal": [
+            {
+              "@type": "PeriodOfTime",
+              "startDate": "2023-01-01",
+              "endDate": "2023-12-31"
+            }
+          ],
+          "license": "https://www.usa.gov/government-works"
+        }
+      ],
+      "inSeries": [
+        {
+          "@id": "https://data.cms.gov/data-api/v1/dataset/92396110-2aed-4d63-a6a2-5d6207d46a29/data",
+          "@type": "DatasetSeries",
+          "title": "Medicare Physician & Other Practitioners - by Provider and Service",
+          "description": "The Medicare Physician & Other Practitioners by Provider and Service dataset provides information on use, payments, and submitted charges organized by National Provider Identifier (NPI), Healthcare Common Procedure Coding System (HCPCS) code, and place of service.",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Office of Enterprise Data and Analytics (OEDA)",
+            "subOrganizationOf": [
+              {
+                "@type": "Organization",
+                "name": "Centers for Medicare and Medicaid Services (CMS)"
+              }
+            ]
+          },
+          "contactPoint": [
+            {
+              "@type": "Kind",
+              "fn": "Medicare Provider Data - OEDA",
+              "hasEmail": "mailto:IPAG_Data_Products@cms.hhs.gov"
+            }
+          ],
+          "identifier": "https://data.cms.gov/data-api/v1/dataset/92396110-2aed-4d63-a6a2-5d6207d46a29/data"
+        }
+      ]
+    }
+  ]
+}

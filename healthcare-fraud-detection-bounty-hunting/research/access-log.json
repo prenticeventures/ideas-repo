@@ -1,0 +1,167 @@
+{
+  "audit_date": "2026-10-25",
+  "auditor": "dataset_audit agent",
+  "policy": "Read-only source checks only; no purchases, account creation, access requests, or contact with source operators.",
+  "entries": [
+    {
+      "source": "CMS Physician & Other Practitioners by Provider and Service",
+      "status": "tested_by_parent",
+      "test": "Parent queried CMS Data API for 2021-2023 HCPCS-specific data; filtered 37225 and received HTTP 200 rows. Current catalog has 2024 version UUID 92396110-2aed-4d63-a6a2-5d6207d46a29.",
+      "access": "Public CMS API and downloads; no authentication/payment.",
+      "source_url": "https://data.cms.gov/provider-summary-by-type-of-service/medicare-physician-other-practitioners/medicare-physician-other-practitioners-by-provider-and-service/api-docs"
+    },
+    {
+      "source": "HHS Medicaid Provider Spending by HCPCS",
+      "status": "tested",
+      "test": "HTTP Range request to public CSV blob returned 206 and 2,048 bytes. Verified 7-field header: BILLING_PROVIDER_NPI_NUM, SERVICING_PROVIDER_NPI_NUM, HCPCS_CODE, CLAIM_FROM_MONTH, TOTAL_PATIENTS, TOTAL_CLAIM_LINES, TOTAL_PAID. Initial sample includes implausibly large paid totals (trillions for a code/month/provider combination); monetary interpretation needs data QA.",
+      "access": "Public static blob; no login/API key. Full CSV 11.55GB; ZIP 3.76GB; Parquet 3.07GB from HHS page.",
+      "source_url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/",
+      "artifact_url": "https://stopendataprod.blob.core.windows.net/datasets/medicaid-provider-spending/2026-02-09/dataset/medicaid-provider-spending.csv"
+    },
+    {
+      "source": "CMS Post-Acute Care PUF HHA CY2024 and Hospice FY2024",
+      "status": "tested",
+      "test": "GET CMS Data API with size=2 returned HTTP 200 JSON for both 2024 series; observed provider/CCN schema, counts, charges and Medicare payment fields.",
+      "access": "Public CMS Data API; no authentication/payment.",
+      "source_urls": [
+        "https://data.cms.gov/data-api/v1/dataset/43ef03ce-2b60-40a8-958e-146195b5fec7/data?size=2",
+        "https://data.cms.gov/data-api/v1/dataset/4e73f1b5-82cb-4682-8ad2-28493f0b6840/data?size=2"
+      ]
+    },
+    {
+      "source": "CMS PECOS HHA All Owners Q4 2026 and SNF All Owners October 2026",
+      "status": "tested",
+      "test": "GET CMS Data API returned HTTP 200 JSON; inspected owner identity/role and provider enrollment fields.",
+      "access": "Public CMS API; no authentication/payment.",
+      "source_urls": [
+        "https://data.cms.gov/data-api/v1/dataset/87e65a9e-3695-4b48-bd5c-4d5f4dfc7f08/data?size=1",
+        "https://data.cms.gov/data-api/v1/dataset/afe44b85-cc6d-40d7-b5df-00ae8910d1d2/data?size=2"
+      ]
+    },
+    {
+      "source": "NPI Registry API",
+      "status": "tested",
+      "test": "GET with NPI 1003000126 returned HTTP 200 and one result; API response includes NPI and current registry fields.",
+      "access": "Public API, no key; the current monthly V2 bulk file is documented at 1,106MB and was not downloaded in full.",
+      "source_url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1003000126"
+    },
+    {
+      "source": "OIG LEIE full CSV",
+      "status": "tested",
+      "test": "Downloaded the full public CSV (10,802,977 bytes, HTTP 200); inspected header and sample rows.",
+      "access": "Public CSV, no API, no login/payment. SSN/EIN omitted by design; online identity verification remains necessary.",
+      "source_url": "https://oig.hhs.gov/exclusions/downloadables/UPDATED.csv"
+    },
+    {
+      "source": "California Medical Board public data / DCA Search API",
+      "status": "tested_public_lookup_bulk_api_restricted",
+      "test": "Opened public DCA search UI; selected Medical Board of California and Physician\u2019s and Surgeon\u2019s, searched first name Harold / last name Tabaie; results page displayed 0 RESULTS. This is one board/name query only, not a finding of no California license or no discipline. Known license number 20A4475 was not checked against the appropriate board; it may belong to the Osteopathic Medical Board. No bulk request or API application was submitted.",
+      "access": "Individual public lookup works without an account. Free MBC bulk Access files require a request and are delivered by Box; DCA Search API requires application approval. NPPES confirms the experiment identity by NPI only; license status remains unverified until the correct board and known license number are checked.",
+      "source_urls": [
+        "https://search.dca.ca.gov/",
+        "https://www.mbc.ca.gov/Resources/Statistics/Public-Information.aspx",
+        "https://search.dca.ca.gov/api"
+      ]
+    },
+    {
+      "source": "CMS Open Payments PY2025",
+      "status": "documented",
+      "test": "Current CMS program page, dataset explorer and field guide verified; no full data archive downloaded in this pass.",
+      "access": "Public datasets downloadable as CSV/ZIP and queryable in CMS explorer; free but large files.",
+      "source_urls": [
+        "https://openpaymentsdata.cms.gov/datasets",
+        "https://www.cms.gov/priorities/key-initiatives/open-payments/data"
+      ]
+    },
+    {
+      "source": "CourtListener RECAP",
+      "status": "documented",
+      "test": "Coverage/limits verified from Free Law Project docs and university law-library guide; no case-specific API query or document fetch performed.",
+      "access": "Free archived search/download; API key/account requirements vary. PACER fetch can incur PACER charges; no PACER account or purchase used.",
+      "source_urls": [
+        "https://www.courtlistener.com/recap/",
+        "https://free.law/recap/",
+        "https://wiki.free.law/c/courtlistener/help/api/rest/v4/recap"
+      ]
+    },
+    {
+      "source": "CMS Part D Prescribers and DMEPOS",
+      "status": "Part D tested in follow-up; DMEPOS documented",
+      "test": "Part D CY2024 size=1 API returned200 after initial429; DMEPOS remains documentation-only. See payer-access.json.",
+      "access": "Public CMS API and CSV download; no authentication/payment.",
+      "source_urls": [
+        "https://data.cms.gov/provider-summary-by-type-of-service/medicare-part-d-prescribers/medicare-part-d-prescribers-by-provider-and-drug",
+        "https://data.cms.gov/provider-summary-by-type-of-service/medicare-durable-medical-equipment-devices-supplies"
+      ]
+    },
+    {
+      "source": "CMS Limited Data Set Standard Analytic Files",
+      "status": "restricted_documented",
+      "test": "CMS official request requirements and current fee/files pages inspected; no account, request, DUA or payment made.",
+      "access": "Approved research organizations require CMS DUA review via EPPE and an approved DMP SAQ; fees apply. CMS identifies the CCW Secure File Transfer System (SFTS) for approved-file delivery. These current instructions do not establish VRDC as mandatory for all analysis.",
+      "source_url": "https://www.cms.gov/data-research/cms-data/data-available-researchers/requesting-limited-data-sets-lds-files"
+    },
+    {
+      "source": "CMS Blue Button API",
+      "status": "restricted_documented",
+      "test": "Official CMS API documentation and production access process inspected; no sandbox registration or production access application made.",
+      "access": "Sandbox data are synthetic. Production app requires CMS approval and each Medicare enrollee must authorize access to their own claims. It cannot provide an outside investigator with arbitrary provider/patient claims.",
+      "source_url": "https://bluebutton.cms.gov/api-documentation/"
+    },
+    {
+      "source": "California official legislative code: CFCA, IFPA and Medi-Cal information reward",
+      "status": "verified_via_browser",
+      "verification_date": "2026-10-25",
+      "test": "Read full official sections in normal in-app browser after automated retrieval returned HTTP 403. No authentication or payment required. Exact cause of automated refusal not established.",
+      "verified_terms": "GOV 12652(g): 15\u201333% / 25\u201350%; INS 1871.7(g): generally 30\u201340% / 40\u201350%, with allocation and statutory exceptions; WIC 14107.12: discretionary lesser of 10% restitution or $1,000, qualifying conviction/recovery, all recoverable funds collected before payment.",
+      "source_urls": [
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=12652.",
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=INS&sectionNum=1871.7.",
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=WIC&sectionNum=14107.12."
+      ]
+    },
+    {
+      "source": "Louisiana current Medicaid information-reward rule",
+      "status": "downloaded_and_independently_read",
+      "test": "Official current Title50 DOCX downloaded. Lead independently verified source hash and section4605. Directory opened in browser. Rule promulgated May2026. Older unavailable rule PDFs are superseded as the source for this finding.",
+      "source_url": "https://www.doa.louisiana.gov/media/ogee2gb4/50.docx",
+      "sha256": "cf72e3cb54fcf1386bf74aab7072119a20d4edf71daf383d0100e64e46a00602",
+      "remaining_gap": "Funding and actual award payments not established."
+    },
+    {
+      "source": "Arkansas Lepanto anonymous-tip conviction release",
+      "status": "verified_via_browser",
+      "source_url": "https://arkansasag.gov/news-release/attorney-general-griffin-secures-conviction-of-lepanto-woman-for-medicaid-fraud/",
+      "test": "Full official release read in browser. Anonymous tip led to conviction. No reward payment disclosed."
+    },
+    {
+      "source": "Florida historical Medicaid reward payments",
+      "status": "official_search_index_text_only",
+      "test": "Official report excerpts disclose FY2017-18 aggregate219450.13 and FY2019-20 aggregate25000. Live report downloads unavailable in web retrieval. FY2017-18 link also failed in browser. No recipients or individual awards verified.",
+      "remaining_gap": "Full historical reports and case-level reward details."
+    },
+    {
+      "source": "ResDAC April2026 VRDC fee schedule",
+      "status": "verified_corrected_source_link",
+      "source_url": "https://resdac.org/sites/default/files/2026-05/CMS-Fee-List-CCW-VRDC-Cloud-Environment.pdf",
+      "test": "Current PDF read. Earlier stale path not used. Innovator minimum first-year seat plus project fee45000."
+    },
+    {
+      "source": "WHIP governing terms, FAQ, launch and directive",
+      "status": "read_and_preserved",
+      "checked_on": "2026-10-25",
+      "source_url": "https://www.justice.gov/fraud/national-fraud-enforcement-division-criminal-tip-rewards-pilot-program",
+      "test": "Complete published terms and FAQ read. Lead independently checked consequential rules, apparent text conflicts and legal authority. Five dated official source files preserved with hashes in access-evidence/whip-2026-10-25.",
+      "remaining_gap": "DOJ application of ambiguous clauses, actual awards and payment timing."
+    },
+    {
+      "source": "WHIP submission portal",
+      "status": "live_first_step_inspected",
+      "source_url": "https://america.gov/fraud",
+      "test": "Browser inspection of first narrative and attachment step only. 2000-character field and5files/50MB each observed. No report facts, contact data or attachments entered. Later identity/signature and receipt steps not reached.",
+      "remaining_gap": "Live later steps and exact signature/certification mechanism."
+    }
+  ],
+  "payer_followup_log": "payer-access.json",
+  "payer_followup_note": "2026-10-25: inpatient/outpatient and PartD actual samples; payer-coverage.md and insurer-checks.csv record product-specific checks and blocked sources; no contacts or submissions."
+}

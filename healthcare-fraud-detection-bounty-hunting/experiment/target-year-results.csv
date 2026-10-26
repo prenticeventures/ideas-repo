@@ -1,0 +1,4 @@
+year,npi,name,state,specialty,place,primary_code_units,addon_code_units_separate,primary_codes_observed,estimated_primary_medicare_payment,estimated_primary_submitted_charges,national_same_place_n,national_primary_unit_rank,specialty_same_place_n,specialty_primary_unit_rank
+2021,1346286663,Harold Tabaie,CA,Vascular Surgery,O,495.0,412.0,"37225,37229",3791675.28,7175000.0,695,12,271,2
+2022,1346286663,Harold Tabaie,CA,Vascular Surgery,O,598.0,592.0,"37225,37229",3876018.16,8667000.0,711,7,274,1
+2023,1346286663,Harold Tabaie,CA,Vascular Surgery,O,429.0,380.0,"37225,37229",2667520.95,6310000.0,695,14,283,1

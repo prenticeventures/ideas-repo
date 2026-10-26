@@ -1,0 +1,21 @@
+review_id,known_case,year,specialty,national_volume_rank,primary_code_units,estimated_payment,largest_code_specific_services_per_beneficiary,specialty_volume_rank,specialty_peer_count,corroboration_status
+P01,False,2023,Diagnostic Radiology,1,1441.0,9838245.45,1.767857,1,46,Not adjudicated; no clinical or patient-level evidence; volume establishes no fraud
+P02,False,2023,Interventional Radiology,2,937.0,6375840.28,1.752874,1,83,Not adjudicated; no clinical or patient-level evidence; volume establishes no fraud
+P03,False,2023,Interventional Radiology,3,926.0,6410510.82,2.301802,2,83,Not adjudicated; no clinical or patient-level evidence; volume establishes no fraud
+P04,False,2023,Interventional Radiology,4,805.0,4921314.36,3.869565,3,83,Not adjudicated; no clinical or patient-level evidence; volume establishes no fraud
+P05,False,2023,Cardiology,5,669.0,3875190.23,1.888889,1,123,Not adjudicated; no clinical or patient-level evidence; volume establishes no fraud
+P06,False,2023,Peripheral Vascular Disease,6,610.0,4099272.71,2.70297,1,5,Not adjudicated; no clinical or patient-level evidence; volume establishes no fraud
+P07,False,2023,Thoracic Surgery,7,594.0,4012085.3,1.305419,1,14,Not adjudicated; no clinical or patient-level evidence; volume establishes no fraud
+P08,False,2023,Interventional Radiology,8,587.0,4005394.52,1.641221,4,83,Not adjudicated; no clinical or patient-level evidence; volume establishes no fraud
+P09,False,2023,Interventional Cardiology,9,575.0,3396290.83,3.701299,1,81,Not adjudicated; no clinical or patient-level evidence; volume establishes no fraud
+P10,False,2023,Interventional Radiology,10,528.0,3370435.45,1.58011,5,83,Not adjudicated; no clinical or patient-level evidence; volume establishes no fraud
+P11,False,2023,Diagnostic Radiology,11,467.0,3449270.19,1.256,2,46,Not adjudicated; no clinical or patient-level evidence; volume establishes no fraud
+P12,False,2023,Interventional Radiology,12,462.0,3428279.96,1.785185,6,83,Not adjudicated; no clinical or patient-level evidence; volume establishes no fraud
+P13,False,2023,Nephrology,12,462.0,3054148.56,2.254386,1,2,Not adjudicated; no clinical or patient-level evidence; volume establishes no fraud
+P14,True,2023,Vascular Surgery,14,429.0,2667520.95,2.229167,1,283,Not adjudicated; no clinical or patient-level evidence; volume establishes no fraud
+P15,False,2023,Vascular Surgery,15,408.0,3027490.69,1.634328,2,283,Not adjudicated; no clinical or patient-level evidence; volume establishes no fraud
+P16,False,2023,Interventional Radiology,16,399.0,2767984.72,1.651376,7,83,Not adjudicated; no clinical or patient-level evidence; volume establishes no fraud
+P17,False,2023,Interventional Cardiology,17,369.0,1939859.14,1.531532,2,81,Not adjudicated; no clinical or patient-level evidence; volume establishes no fraud
+P18,False,2023,Vascular Surgery,18,359.0,2404009.75,1.685185,3,283,Not adjudicated; no clinical or patient-level evidence; volume establishes no fraud
+P19,False,2023,Vascular Surgery,19,355.0,2822381.43,1.318519,4,283,Not adjudicated; no clinical or patient-level evidence; volume establishes no fraud
+P20,False,2023,Vascular Surgery,20,354.0,2738938.44,1.243243,5,283,Not adjudicated; no clinical or patient-level evidence; volume establishes no fraud

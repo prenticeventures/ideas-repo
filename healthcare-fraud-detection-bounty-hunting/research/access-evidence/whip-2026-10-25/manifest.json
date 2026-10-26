@@ -1,0 +1,42 @@
+[
+  {
+    "file": "terms.html",
+    "url": "https://www.justice.gov/fraud/national-fraud-enforcement-division-criminal-tip-rewards-pilot-program",
+    "status": 200,
+    "retrieved_date": "2026-10-25",
+    "bytes": 116688,
+    "sha256": "a0cec52a755482066596ca949080e673d4963af733bddf768b87f25b37299cbc"
+  },
+  {
+    "file": "faq.html",
+    "url": "https://www.justice.gov/fraud/criminal-tip-rewards-pilot-program-faqs",
+    "status": 200,
+    "retrieved_date": "2026-10-25",
+    "bytes": 98691,
+    "sha256": "9c73e0a6e1a17de6c43a8fde1ad992016af87c5e7a27e0c63aaaf6bc439bbd48"
+  },
+  {
+    "file": "launch.html",
+    "url": "https://www.justice.gov/opa/pr/justice-department-announces-innovative-whistleblower-rewards-program-combat-fraud",
+    "status": 200,
+    "retrieved_date": "2026-10-25",
+    "bytes": 94711,
+    "sha256": "151376c37d1686488a929c1efceb97422518fa0c000bc7ea83604f009d8a59d1"
+  },
+  {
+    "file": "directive-26-12.pdf",
+    "url": "https://www.justice.gov/opa/media/1463571/dl",
+    "status": 200,
+    "retrieved_date": "2026-10-25",
+    "bytes": 232967,
+    "sha256": "7521731ee6e5a85b28900add8b45183a5b27594770cc39ad21910eac64d99a4a"
+  },
+  {
+    "file": "rewards-authority.html",
+    "url": "https://uscode.house.gov/us/usc/119-124/t28/s530C/",
+    "status": 200,
+    "retrieved_date": "2026-10-25",
+    "bytes": 28218,
+    "sha256": "eb950a1ae3e260e7437c9cf626b0b6f603201b11e77382700f22b532e221eb4f"
+  }
+]

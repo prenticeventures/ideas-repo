@@ -1,0 +1,31 @@
+{
+  "audit_date": "2026-10-25",
+  "url": "https://stopendataprod.blob.core.windows.net/datasets/medicaid-provider-spending/2026-02-09/dataset/medicaid-provider-spending.csv",
+  "request_header": "Range: bytes=0-2047",
+  "http_status": 206,
+  "response_content_range": "bytes 0-2047/11550141995",
+  "content_length": 2048,
+  "headers": {
+    "Content-Length": "2048",
+    "Content-Type": "text/csv",
+    "Content-Range": "bytes 0-2047/11550141995",
+    "Last-Modified": "Mon, 06 Apr 2026 14:09:46 GMT",
+    "ETag": "0x8DE93E62891859E",
+    "Vary": "Origin",
+    "Server": "Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0",
+    "x-ms-request-id": "673c547d-501e-0003-6caa-64fa73000000",
+    "x-ms-version": "2009-09-19",
+    "x-ms-meta-sha256": "35c2012ae49940956c62ef1c5326e055619f3963e427305c98566bf38f6af14a",
+    "x-ms-lease-status": "unlocked",
+    "x-ms-blob-type": "BlockBlob",
+    "Date": "Sun, 25 Oct 2026 17:55:27 GMT"
+  },
+  "sample_path": "medicaid-sample-0-2047.bin",
+  "npi_registry_check_url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=5200000300",
+  "npi_registry_http_status": 200,
+  "npi_registry_response": {
+    "result_count": 0,
+    "results": []
+  },
+  "original_sample_path": "/Users/teeraprice/Documents/Codex/2026-10-25/can-x20/work/dataset-audit/medicaid-sample-0-2047.bin"
+}

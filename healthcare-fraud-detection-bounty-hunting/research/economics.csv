@@ -1,0 +1,37 @@
+model,hours_per_researched_lead,hour_value,cash_per_lead,economic_cost,gross_eventual_award,required_eventual_payment_rate,assumed_or_observed,collected_recovery,relator_share,gross_relator_award,assumed_counsel_fraction_of_award,net_before_other_cost_tax,years_until_payment,assumed_discount_rate,present_value,dataset_purchase_cost,leads_sharing_dataset
+WHIP hypothetical sensitivity,20,50,500,1500,10000,0.15,assumed costs; required probability not an estimate; no tax or delay adjustment,,,,,,,,,,
+WHIP hypothetical sensitivity,20,50,500,1500,20000,0.075,assumed costs; required probability not an estimate; no tax or delay adjustment,,,,,,,,,,
+WHIP hypothetical sensitivity,20,50,500,1500,30000,0.05,assumed costs; required probability not an estimate; no tax or delay adjustment,,,,,,,,,,
+WHIP hypothetical sensitivity,50,50,500,3000,10000,0.3,assumed costs; required probability not an estimate; no tax or delay adjustment,,,,,,,,,,
+WHIP hypothetical sensitivity,50,50,500,3000,20000,0.15,assumed costs; required probability not an estimate; no tax or delay adjustment,,,,,,,,,,
+WHIP hypothetical sensitivity,50,50,500,3000,30000,0.1,assumed costs; required probability not an estimate; no tax or delay adjustment,,,,,,,,,,
+WHIP hypothetical sensitivity,100,50,500,5500,10000,0.55,assumed costs; required probability not an estimate; no tax or delay adjustment,,,,,,,,,,
+WHIP hypothetical sensitivity,100,50,500,5500,20000,0.275,assumed costs; required probability not an estimate; no tax or delay adjustment,,,,,,,,,,
+WHIP hypothetical sensitivity,100,50,500,5500,30000,0.18333333333333332,assumed costs; required probability not an estimate; no tax or delay adjustment,,,,,,,,,,
+FCA hypothetical recovery and delay,,,,,,,scenario only; counsel not quoted; timelines not measured; share exceptions apply,1000000,0.15,150000.0,0.4,90000.0,1,0.1,81818.18,,
+FCA hypothetical recovery and delay,,,,,,,scenario only; counsel not quoted; timelines not measured; share exceptions apply,1000000,0.15,150000.0,0.4,90000.0,3,0.1,67618.33,,
+FCA hypothetical recovery and delay,,,,,,,scenario only; counsel not quoted; timelines not measured; share exceptions apply,1000000,0.15,150000.0,0.4,90000.0,5,0.1,55882.92,,
+FCA hypothetical recovery and delay,,,,,,,scenario only; counsel not quoted; timelines not measured; share exceptions apply,1000000,0.25,250000.0,0.4,150000.0,1,0.1,136363.64,,
+FCA hypothetical recovery and delay,,,,,,,scenario only; counsel not quoted; timelines not measured; share exceptions apply,1000000,0.25,250000.0,0.4,150000.0,3,0.1,112697.22,,
+FCA hypothetical recovery and delay,,,,,,,scenario only; counsel not quoted; timelines not measured; share exceptions apply,1000000,0.25,250000.0,0.4,150000.0,5,0.1,93138.2,,
+FCA hypothetical recovery and delay,,,,,,,scenario only; counsel not quoted; timelines not measured; share exceptions apply,5000000,0.15,750000.0,0.4,450000.0,1,0.1,409090.91,,
+FCA hypothetical recovery and delay,,,,,,,scenario only; counsel not quoted; timelines not measured; share exceptions apply,5000000,0.15,750000.0,0.4,450000.0,3,0.1,338091.66,,
+FCA hypothetical recovery and delay,,,,,,,scenario only; counsel not quoted; timelines not measured; share exceptions apply,5000000,0.15,750000.0,0.4,450000.0,5,0.1,279414.6,,
+FCA hypothetical recovery and delay,,,,,,,scenario only; counsel not quoted; timelines not measured; share exceptions apply,5000000,0.25,1250000.0,0.4,750000.0,1,0.1,681818.18,,
+FCA hypothetical recovery and delay,,,,,,,scenario only; counsel not quoted; timelines not measured; share exceptions apply,5000000,0.25,1250000.0,0.4,750000.0,3,0.1,563486.1,,
+FCA hypothetical recovery and delay,,,,,,,scenario only; counsel not quoted; timelines not measured; share exceptions apply,5000000,0.25,1250000.0,0.4,750000.0,5,0.1,465690.99,,
+FCA hypothetical recovery and delay,,,,,,,scenario only; counsel not quoted; timelines not measured; share exceptions apply,10000000,0.15,1500000.0,0.4,900000.0,1,0.1,818181.82,,
+FCA hypothetical recovery and delay,,,,,,,scenario only; counsel not quoted; timelines not measured; share exceptions apply,10000000,0.15,1500000.0,0.4,900000.0,3,0.1,676183.32,,
+FCA hypothetical recovery and delay,,,,,,,scenario only; counsel not quoted; timelines not measured; share exceptions apply,10000000,0.15,1500000.0,0.4,900000.0,5,0.1,558829.19,,
+FCA hypothetical recovery and delay,,,,,,,scenario only; counsel not quoted; timelines not measured; share exceptions apply,10000000,0.25,2500000.0,0.4,1500000.0,1,0.1,1363636.36,,
+FCA hypothetical recovery and delay,,,,,,,scenario only; counsel not quoted; timelines not measured; share exceptions apply,10000000,0.25,2500000.0,0.4,1500000.0,3,0.1,1126972.2,,
+FCA hypothetical recovery and delay,,,,,,,scenario only; counsel not quoted; timelines not measured; share exceptions apply,10000000,0.25,2500000.0,0.4,1500000.0,5,0.1,931381.98,,
+WHIP data-purchase allocation scenario,50,50,2200.0,4700.0,20000,0.235,Hypothetical purchase allocation. Not a quote or estimated success probability. All leads must fit approved use. No tax or delay adjustment.,,,,,,,,,1700,1
+WHIP data-purchase allocation scenario,50,50,840.0,3340.0,20000,0.167,Hypothetical purchase allocation. Not a quote or estimated success probability. All leads must fit approved use. No tax or delay adjustment.,,,,,,,,,1700,5
+WHIP data-purchase allocation scenario,50,50,670.0,3170.0,20000,0.1585,Hypothetical purchase allocation. Not a quote or estimated success probability. All leads must fit approved use. No tax or delay adjustment.,,,,,,,,,1700,10
+WHIP data-purchase allocation scenario,50,50,5600.0,8100.0,20000,0.405,Hypothetical purchase allocation. Not a quote or estimated success probability. All leads must fit approved use. No tax or delay adjustment.,,,,,,,,,5100,1
+WHIP data-purchase allocation scenario,50,50,1520.0,4020.0,20000,0.201,Hypothetical purchase allocation. Not a quote or estimated success probability. All leads must fit approved use. No tax or delay adjustment.,,,,,,,,,5100,5
+WHIP data-purchase allocation scenario,50,50,1010.0,3510.0,20000,0.1755,Hypothetical purchase allocation. Not a quote or estimated success probability. All leads must fit approved use. No tax or delay adjustment.,,,,,,,,,5100,10
+WHIP data-purchase allocation scenario,50,50,9500.0,12000.0,20000,0.6,Hypothetical purchase allocation. Not a quote or estimated success probability. All leads must fit approved use. No tax or delay adjustment.,,,,,,,,,9000,1
+WHIP data-purchase allocation scenario,50,50,2300.0,4800.0,20000,0.24,Hypothetical purchase allocation. Not a quote or estimated success probability. All leads must fit approved use. No tax or delay adjustment.,,,,,,,,,9000,5
+WHIP data-purchase allocation scenario,50,50,1400.0,3900.0,20000,0.195,Hypothetical purchase allocation. Not a quote or estimated success probability. All leads must fit approved use. No tax or delay adjustment.,,,,,,,,,9000,10

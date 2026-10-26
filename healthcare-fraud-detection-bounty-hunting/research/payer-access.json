@@ -1,0 +1,124 @@
+[
+  {
+    "key": "inpatient2024",
+    "url": "https://data.cms.gov/data-api/v1/dataset/ca9b5ef0-1386-4759-b2b6-5f9b35116786/data?size=1",
+    "error": "HTTP Error 429: Too Many Requests",
+    "retrieved_date": "2026-10-25"
+  },
+  {
+    "key": "outpatient2024",
+    "url": "https://data.cms.gov/data-api/v1/dataset/771e94a2-cd8f-4702-a9d7-8f777f363938/data?size=1",
+    "status": 200,
+    "bytes": 684,
+    "retrieved_date": "2026-10-25",
+    "sample": [
+      {
+        "Rndrng_Prvdr_CCN": "010001",
+        "Rndrng_Prvdr_Org_Name": "Southeast Health Medical Center",
+        "Rndrng_Prvdr_St": "1108 Ross Clark Circle",
+        "Rndrng_Prvdr_City": "Dothan",
+        "Rndrng_Prvdr_State_Abrvtn": "AL",
+        "Rndrng_Prvdr_State_FIPS": "01",
+        "Rndrng_Prvdr_Zip5": "36301",
+        "Rndrng_Prvdr_RUCA": "2",
+        "Rndrng_Prvdr_RUCA_Desc": "Metropolitan area high commuting: primary flow 30% or more to a urbanized area of 50,000 and greater",
+        "APC_Cd": "5072",
+        "APC_Desc": "Level 2 Excision/ Biopsy/ Incision and Drainage",
+        "Bene_Cnt": "175",
+        "CAPC_Srvcs": "188",
+        "Avg_Tot_Sbmtd_Chrgs": "9637.6640957447",
+        "Avg_Mdcr_Alowd_Amt": "1365.3702659575",
+        "Avg_Mdcr_Pymt_Amt": "1080.9503723404",
+        "Outlier_Srvcs": "0",
+        "Avg_Mdcr_Outlier_Amt": "0"
+      }
+    ]
+  },
+  {
+    "key": "partd2024",
+    "url": "https://data.cms.gov/data-api/v1/dataset/9552739e-3d05-4c1b-8eff-ecabf391e2e5/data?size=1",
+    "error": "HTTP Error 429: Too Many Requests",
+    "retrieved_date": "2026-10-25"
+  },
+  {
+    "key": "ny_authorization",
+    "url": "https://www.health.ny.gov/health_care/medicaid/medicaid_release.htm",
+    "error": "HTTP Error 403: Forbidden",
+    "retrieved_date": "2026-10-25"
+  },
+  {
+    "key": "fl_dashboard",
+    "url": "https://ahca.myflorida.com/medicaid/agency-dashboards.html",
+    "error": "HTTP Error 403: Forbidden",
+    "retrieved_date": "2026-10-25"
+  },
+  {
+    "key": "inpatient2024",
+    "url": "https://data.cms.gov/data-api/v1/dataset/ca9b5ef0-1386-4759-b2b6-5f9b35116786/data?size=1",
+    "status": 200,
+    "bytes": 653,
+    "retrieved_date": "2026-10-25",
+    "sample": [
+      {
+        "Rndrng_Prvdr_CCN": "010001",
+        "Rndrng_Prvdr_Org_Name": "Southeast Health Medical Center",
+        "Rndrng_Prvdr_City": "Dothan",
+        "Rndrng_Prvdr_St": "1108 Ross Clark Circle",
+        "Rndrng_Prvdr_State_FIPS": "01",
+        "Rndrng_Prvdr_Zip5": "36301",
+        "Rndrng_Prvdr_State_Abrvtn": "AL",
+        "Rndrng_Prvdr_RUCA": "2",
+        "Rndrng_Prvdr_RUCA_Desc": "Metropolitan area high commuting: primary flow 30% or more to a urbanized area of 50,000 and greater",
+        "DRG_Cd": "003",
+        "DRG_Desc": "ECMO OR TRACHEOSTOMY WITH MV >96 HOURS OR PRINCIPAL DIAGNOSIS EXCEPT FACE, MOUTH AND NEC",
+        "Tot_Dschrgs": "11",
+        "Avg_Submtd_Cvrd_Chrg": "738478.63636",
+        "Avg_Tot_Pymt_Amt": "103236.27273",
+        "Avg_Mdcr_Pymt_Amt": "91218.181818"
+      }
+    ],
+    "attempt": 2
+  },
+  {
+    "key": "partd2024",
+    "url": "https://data.cms.gov/data-api/v1/dataset/9552739e-3d05-4c1b-8eff-ecabf391e2e5/data?size=1",
+    "status": 200,
+    "bytes": 593,
+    "retrieved_date": "2026-10-25",
+    "sample": [
+      {
+        "Prscrbr_NPI": "1003000126",
+        "Prscrbr_Last_Org_Name": "Enkeshafi",
+        "Prscrbr_First_Name": "Ardalan",
+        "Prscrbr_City": "Bethesda",
+        "Prscrbr_State_Abrvtn": "MD",
+        "Prscrbr_State_FIPS": "24",
+        "Prscrbr_Type": "Internal Medicine",
+        "Prscrbr_Type_Src": "Claim-Specialty",
+        "Brnd_Name": "Abrysvo",
+        "Gnrc_Name": "Rsv Vacc, Pref A And Pref B/Pf",
+        "Tot_Clms": "20",
+        "Tot_30day_Fills": "20",
+        "Tot_Day_Suply": "20",
+        "Tot_Drug_Cst": "5994.01",
+        "Tot_Benes": "20",
+        "GE65_Sprsn_Flag": "",
+        "GE65_Tot_Clms": "20",
+        "GE65_Tot_30day_Fills": "20",
+        "GE65_Tot_Drug_Cst": "5994.01",
+        "GE65_Tot_Day_Suply": "20",
+        "GE65_Bene_Sprsn_Flag": "",
+        "GE65_Tot_Benes": "20"
+      }
+    ],
+    "attempt": 2
+  },
+  {
+    "key": "additional_document_access_limits",
+    "date": "2026-10-25",
+    "OPM_OIG": "root406; hotline inaccessible; current OPM carrier page accessible",
+    "Anthem_Wellpoint": "Wellpoint manual timed out; linked reporting site502; accessible official Ohio Anthem orientation used instead",
+    "California_CPRA": "DHCS explanatory page accessible; linked report failed retrieval",
+    "DOL": "Self-funding explanation pages returned403; direct current insurer funding explanation used instead"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "year": 2023,
+  "code": "37235",
+  "dataset_uuid": "0e9f2f2b-7bf9-451a-912c-e02e654dd725",
+  "urls": [
+    "https://data.cms.gov/data-api/v1/dataset/0e9f2f2b-7bf9-451a-912c-e02e654dd725/data?filter%5BHCPCS_Cd%5D=37235&size=5000&offset=0"
+  ],
+  "retrieved_at_utc": "2026-10-25T17:53:31.735726+00:00",
+  "row_count": 1,
+  "sha256": "55dfa396faa046ccf99d0ceb77653cd4c9a1ed6ad30dc2148cd9fd7445b03627",
+  "download_seconds": 1.289
+}
